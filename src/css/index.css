@@ -1,0 +1,32 @@
+:root{
+  --body_background: rgb(187, 182, 170);
+  --body_color: hsl(0, 0%, 10%);
+  --link_color: pink;
+  --pad: max(20px, 4vmin);
+  transition: all 0.5s ease-in-out;
+
+}
+
+[data-theme='dark']{
+  --body_background: hsl(0, 0%, 10%);
+  --body_color: white;
+  --link_color: rgb(165, 63, 80);
+}
+
+*{
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: "Neue Montreal";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
