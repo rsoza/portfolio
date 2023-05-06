@@ -10,6 +10,7 @@
   white-space: nowrap;
   display: flex;
   cursor: pointer;
+  
 }
 .dark_mode_label, .light_mode_label {
   display: inline-flex;
@@ -30,6 +31,7 @@
 
 .dark_mode_input:checked {
   background-color: #ccc;
+  
 }
 
 
