@@ -1,5 +1,5 @@
 :root{
-  --body_background: rgb(187, 182, 170);
+  --body_background: rgb(255, 255, 255);
   --body_color: hsl(0, 0%, 10%);
   --link_color: pink;
   --pad: max(20px, 4vmin);
@@ -19,7 +19,6 @@ body {
   background-color: var(--body_background);
   color: var(--body_color);
   transition: all 0.5s ease-in-out;
-
 }
 
 code {

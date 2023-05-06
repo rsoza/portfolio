@@ -9,15 +9,15 @@
   transform: rotate(-90deg);
   white-space: nowrap;
   display: flex;
-  cursor: pointer;
-  
 }
 .dark_mode_label, .light_mode_label {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   margin-bottom: 10px;
 }
 .dark_mode_input {
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -27,6 +27,7 @@
   height: 16px;
   margin-right: 2px;
   margin-left: 20px;
+
 }
 
 .dark_mode_input:checked {
