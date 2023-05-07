@@ -1,11 +1,16 @@
-import './css/Style.css';
-import DarkMode from './utils/DarkMode';
+import "./css/Style.css";
+import DarkMode from "./utils/DarkMode";
 
 function App() {
   return (
-    <div>
-      <DarkMode />
+    <>
+        <DarkMode />
+      <div className="container">
+      <div className="content">
+       
+      </div>
     </div>
+    </>
   );
 }
 
