@@ -66,20 +66,21 @@ label {
   line-height: 1.5;
 }
 .title{
-  font-weight:400;
-  font-size: 30px;
+  font-weight:300;
+  font-size: 28px;
   color: var(--body_color);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .label {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
 }
 span {
   display: block;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 p {
