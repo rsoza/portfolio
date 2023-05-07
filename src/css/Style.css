@@ -3,11 +3,10 @@
   margin-left: 10px;
   position: fixed;
   z-index: 10;
-  left: calc(var(--pad) - 0.15em);
+  left: var(--pad);
   bottom: var(--pad);
   transform-origin: left bottom;
   transform: rotate(-90deg);
-  
 }
 .dark_mode_label, .light_mode_label {
   cursor: pointer;
