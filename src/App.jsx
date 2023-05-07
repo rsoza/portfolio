@@ -2,6 +2,8 @@ import "./css/Style.css";
 import Home from "./pages/Home";
 import DarkMode from "./utils/DarkMode";
 import React, {useState, useEffect} from "react";
+import { Flex, Box, Spacer } from "@chakra-ui/layout";
+import Navbar from "./pages/Navbar";
 
 function App() {
   const [windowDimension, detectHW] = useState ({
@@ -23,19 +25,26 @@ function App() {
     }
   });
 
-  const height = windowDimension.winHeight - 50;
+  const height = windowDimension.winHeight - 80;
+  const width = windowDimension.winWidth - 60;
   console.log(windowDimension);
 
   return (
     <>
-      <div className="container"
-      >
+      <div className="container">
         <DarkMode />
-
         <div className="content"
-        style={{width:windowDimension.winWidth, height: height}}>
-          <Home />
-        <div className="about">hello</div>
+        style={{width: width, height: height}}>
+        <Flex>
+          <Box>
+            <Navbar />
+          </Box>
+          <Spacer />
+          
+      <Box>
+            <Home />
+          </Box>
+        </Flex>
         </div>
       </div>
     </>

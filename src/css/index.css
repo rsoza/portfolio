@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Neue Montreal";
+  font-family: Montserrat, sans-serif;
   font-feature-settings: "palt";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +38,6 @@ label {
 
 .container {
   position: relative;
-  /* height: calc(100vh - var(--pad) * 2);  */
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -47,7 +46,6 @@ label {
 .content {
   padding: 10px;
   border: 1px solid var(--body_color);
-  /* width: calc(100% - 20px);  */
   overflow-y: auto;
 }
 
@@ -56,10 +54,9 @@ label {
 }
 
 .Heading {
-  /* margin: 0.2em 0 0 0.5em; */
-  padding: 0;
+  padding-top: 10px;
+  padding-left: 20px;
   line-height: 0.4;
-
 }
 .about {
   margin-top: auto;
@@ -69,12 +66,25 @@ label {
   line-height: 1.5;
 }
 .title{
-  font-weight: 300;
-  font-size: xx-large;
+  font-weight:400;
+  font-size: 30px;
   color: var(--body_color);
-  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .label {
-  font-weight: 300;
-  font-size: medium;
+  font-weight: 400;
+  font-size: 14px;
+}
+span {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+p {
+  position: absolute;
+  right: calc(var(--pad)*2);
+  bottom: calc(var(--pad)*2);
+  white-space: nowrap;
 }
