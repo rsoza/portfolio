@@ -39,7 +39,12 @@ function App() {
               <Navbar />
             </Box>
             <Spacer />
-            <Box>
+            <Box
+            bottom='10%'
+            right='5%'
+            position='fixed' 
+            
+            >
               <Home />
             </Box>
           </Flex>

@@ -11,7 +11,7 @@ function Navbar() {
     >
     <div className="Heading">
         <h1 className="title">Rebecca Soza</h1>
-      <h3 className="label">Computer Science Student</h3>
+      <h3 className="subHeader">Computer Science Student</h3>
         </div>
     </motion.div>
     <div className="navbar">

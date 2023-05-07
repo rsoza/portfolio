@@ -41,7 +41,7 @@ const DarkMode = () => {
           onChange={toggleThemeLight}
           defaultChecked={selectedTheme === "light"}
         />
-        <motion.span whileHover={{ scale: 0.9 }}>LIGHT</motion.span>
+        <motion.div whileHover={{ scale: 0.9 }}>LIGHT</motion.div>
       </motion.label>
       <motion.label 
       className="dark_mode_label" 
@@ -57,7 +57,7 @@ const DarkMode = () => {
           value="option1"
           defaultChecked={selectedTheme === "dark"}
         />
-        <motion.span whileHover={{ scale: 0.9 }}>DARK</motion.span>
+        <motion.div whileHover={{ scale: 0.9 }}>DARK</motion.div>
       </motion.label>
     </div>
   );

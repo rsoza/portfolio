@@ -26,14 +26,12 @@ code {
   monospace;
 }
 
-div {
-  display: block;
-}
+
 
 label {
   font-family: "Neue Montreal";
   font-size: 14px;
-  word-spacing:normal;
+  font-weight: 100;
 }
 
 .container {
@@ -47,6 +45,7 @@ label {
   padding: 10px;
   border: 1px solid var(--body_color);
   overflow-y: auto;
+  backdrop-filter: blur(10px);
 }
 
 .content::-webkit-scrollbar {
@@ -72,8 +71,8 @@ label {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.label {
-  font-weight: 500;
+.subHeader {
+  font-weight: 600;
   font-size: 14px;
 }
 span {
@@ -84,7 +83,7 @@ span {
 }
 
 p {
-  position: absolute;
+  /* position: absolute; */
   right: calc(var(--pad)*2);
   bottom: calc(var(--pad)*2);
   white-space: nowrap;
