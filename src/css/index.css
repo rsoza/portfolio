@@ -37,6 +37,7 @@ label {
 .container {
   position: relative;
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }
@@ -45,7 +46,6 @@ label {
   padding: 10px;
   border: 1px solid var(--body_color);
   overflow-y: auto;
-  backdrop-filter: blur(10px);
 }
 
 .content::-webkit-scrollbar {
@@ -87,4 +87,25 @@ p {
   right: calc(var(--pad)*2);
   bottom: calc(var(--pad)*2);
   white-space: nowrap;
+}
+
+.top-blur, .bottom-blur {
+  position: absolute;
+  left: 0;
+  height: 20px;
+  opacity: 0.9;
+  width: 100%;
+  background-color: var(--body_background);
+  transition-duration: .9s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  z-index: 1; /* ensure this layer is on top of other elements */
+}
+
+.bottom-blur {
+  bottom: 0;
+  
+}
+.top-blur {
+  top: 0;
+  
 }

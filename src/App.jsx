@@ -25,12 +25,14 @@ function App() {
     };
   });
 
-  const height = windowDimension.winHeight - 80;
+  const height = windowDimension.winHeight - 70;
   const width = windowDimension.winWidth - 60;
   console.log(windowDimension);
 
   return (
     <>
+    <div className="top-blur"/>
+    <div className="bottom-blur" />
       <div className="container">
         <DarkMode />
         <div className="content" style={{ width: width, height: height }}>
@@ -42,8 +44,7 @@ function App() {
             <Box
             bottom='10%'
             right='5%'
-            position='fixed' 
-            
+            position='fixed'
             >
               <Home />
             </Box>
