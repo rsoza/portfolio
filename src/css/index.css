@@ -38,7 +38,7 @@ label {
 
 .container {
   position: relative;
-  height: calc(100vh - var(--pad) * 2); 
+  /* height: calc(100vh - var(--pad) * 2);  */
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -47,7 +47,7 @@ label {
 .content {
   padding: 10px;
   border: 1px solid var(--body_color);
-  width: calc(100% - 20px); 
+  /* width: calc(100% - 20px);  */
   overflow-y: auto;
 }
 

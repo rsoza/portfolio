@@ -1,24 +1,16 @@
 import "../css/Style.css";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 function Home() {
-    const [rotate, setRotate] = useState(-10);
-    const [delay, setDelay] = useState(0.5);
-
   return (
     <>
     <div className="Heading">
     <motion.div 
-    animate={{ rotate }}
+    animate={{ rotate: -1 }}
     transition={{ 
-        delay,
-        type: 'spring',
-        bounce: 0.6,
-        stiffness: 30,
-        damping: 30
-    }}
-    onClick={() => {setRotate(0); setDelay(0);}}>
+        delay: 0.5,
+        type: 'spring'
+    }}>
         <h1 className="title">Rebecca Soza</h1>
     </motion.div>
       <h3 className="label">Computer Science Student</h3>

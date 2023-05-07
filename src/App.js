@@ -23,14 +23,17 @@ function App() {
     }
   });
 
+  const height = windowDimension.winHeight - 50;
   console.log(windowDimension);
 
   return (
     <>
-      <div className="container">
+      <div className="container"
+      >
         <DarkMode />
 
-        <div className="content">
+        <div className="content"
+        style={{width:windowDimension.winWidth, height: height}}>
           <Home />
         <div className="about">hello</div>
         </div>
