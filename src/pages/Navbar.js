@@ -22,7 +22,7 @@ function Navbar(props) {
             </ul>
             <ul>
               <a className="_text" href='#projects' onClick={() => props.handleNavItemClick('projects')}>
-              {props.selectedNavItem === 'projects' ? '●' : 'Project'}
+              {props.selectedNavItem === 'projects' ? '●' : 'Projects'}
 
               </a>
             </ul>
