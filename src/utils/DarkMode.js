@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Style.css";
+import "../css/darkmode.css";
 import { motion } from "framer-motion";
 
 const DarkMode = () => {

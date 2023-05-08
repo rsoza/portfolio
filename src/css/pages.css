@@ -1,0 +1,30 @@
+.page {
+    display: none;
+    width: 100%;
+    min-height: calc(var(--vh, 1vh)*100);
+
+}
+
+.home {
+    position: absolute;
+    right: calc(var(--pad)*2);
+    bottom: calc(var(--pad)*2);
+    white-space: nowrap;
+}
+
+.home_aboutme span {
+    display: block;
+}
+
+.project {
+    padding: calc(var(--pad)*2 + 96px) calc(var(--pad)*2);
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media(min-width: 1280px) {
+    .project {
+        padding:calc(var(--pad)*2 + 125px) calc(var(--pad)*2);
+    }
+}
+

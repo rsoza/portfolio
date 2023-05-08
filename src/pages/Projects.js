@@ -1,9 +1,8 @@
-import '../css/pages.css';
-
-function Home() {
+import '../css/pages.css'
+function Projects() {
   return (
-    <section class="page" data-page="home" style={{display: 'block', opacity: '1'}}>
-      <div className='page_content home'>
+    <section className="page" data-page="projects" style={{display: 'block', opacity: '1'}}>
+      <div className='page_content project'>
 
     <p className='home_aboutme'>
       <span>Born in 1993,</span>
@@ -25,4 +24,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Projects;
