@@ -8,12 +8,16 @@
 .home {
     position: absolute;
     right: calc(var(--pad)*2);
-    bottom: calc(var(--pad)*2);
+    bottom: calc(var(--pad)*6);
     white-space: nowrap;
 }
 
+.home_aboutme {
+    line-height: 1.5;
+}
+
 .home_aboutme span {
-    display: block;
+    display: block
 }
 
 .project {
@@ -28,3 +32,20 @@
     }
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    -webkit-user-select: inherit;
+    user-select: inherit;
+    -webkit-user-drag: inherit;
+    -webkit-tap-highlight-color: inherit;
+    backface-visibility: inherit;
+}

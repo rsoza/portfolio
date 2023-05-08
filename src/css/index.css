@@ -2,8 +2,7 @@
   --body_background: hsl(0, 0%, 90%);
   --body_color: hsl(0, 0%, 10%);
   --link_color: pink;
-  --pad: max(20px, 4vmin);
-  --vh: calc(var(--vh, 1vh) * 1);
+  --pad: max(20px, 1vmin);
 }
 
 [data-theme='dark']{
@@ -23,7 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
-  margin: 0;
 }
 
 
@@ -39,7 +37,8 @@ html {
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: var(--body_color);
 }
-#Main {
+
+#root {
   position: fixed;
   left: 0;
   top: 0;
@@ -51,6 +50,7 @@ html {
   white-space: nowrap;
   transition-property: background-color;
   transition-duration: .9s;
+  overflow-X: auto;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
 }
 
@@ -62,7 +62,6 @@ html {
   top: var(--pad);
   bottom: var(--pad);
   pointer-events: none;
-  overflow: hidden;
 }
 
 .borders {

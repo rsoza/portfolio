@@ -19,7 +19,7 @@ function App() {
     links.forEach(link => {
       link.classList.remove('_active');
     });
-    
+
     if (navItem === '' || navItem === 'home') {
       selectedLink = document.querySelector('a[href="#"]');
       if (!selectedLink) {
@@ -46,28 +46,21 @@ function App() {
   }
 
   return (
-    <div id="Main">
-      <div id ="Container">
-        {/* add background canvas here */}
-      </div>
-      <div className="borders" id="Borders">
-        <div className="border_top"/>
-        <div className="border_bot"/>
-      </div>
-      <div className="frame" id="Frame">
-        <div className="frame_border frame_left"/>
-        <div className="frame_border frame_right"/>
-        <div className="frame_border frame_top"/>
-        <div className="frame_border frame_bot"/>
-      </div>
-        <DarkMode />
-        <Navbar handleNavItemClick={handleNavItemClick} selectedNavItem={selectedNavItem} />
-        <main className="content" id="Content" data-scroll="area">
-          <div className="content_inner" data-scroll="target" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
+      <><div id="Container">
+      {/* add background canvas here */}
+    </div><div className="borders" id="Borders">
+        <div className="border_top" />
+        <div className="border_bot" />
+      </div><div className="frame" id="Frame">
+        <div className="frame_border frame_left" />
+        <div className="frame_border frame_right" />
+        <div className="frame_border frame_top" />
+        <div className="frame_border frame_bot" />
+      </div><DarkMode /><Navbar handleNavItemClick={handleNavItemClick} selectedNavItem={selectedNavItem} /><main className="content" id="Content" data-scroll="area">
+        <div className="content_inner" data-scroll="target" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
           {mainContent}
-          </div>
-        </main>
-    </div>
+        </div>
+      </main></>
   );
 }
 

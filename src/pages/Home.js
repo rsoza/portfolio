@@ -2,7 +2,7 @@ import '../css/pages.css';
 
 function Home() {
   return (
-    <section class="page" data-page="home" style={{display: 'block', opacity: '1'}}>
+    <section className="page" data-page="home" style={{display: 'block', opacity: '1'}}>
       <div className='page_content home'>
 
     <p className='home_aboutme'>
