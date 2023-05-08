@@ -3,6 +3,7 @@
   --body_color: hsl(0, 0%, 10%);
   --link_color: pink;
   --pad: max(20px, 4vmin);
+  --vh: calc(var(--vh, 1vh) * 1);
 }
 
 [data-theme='dark']{
