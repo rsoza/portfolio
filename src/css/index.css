@@ -138,3 +138,12 @@ html {
   height: 1px;
 }
 
+.content_inner {
+  position: relative;
+  min-height: 100%
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
