@@ -1,10 +1,15 @@
 import '../css/pages.css';
+import { motion } from 'framer-motion';
 
 function Home() {
   return (
-    <section className="page" data-page="home" style={{display: 'block', opacity: '1'}}>
+      <motion.div 
+    initial={{opacity:0, }}
+    animate={{opacity:1 }}
+    exit={{opacity:0, }}
+    >
+    <section className="page" data-page="home" style={{display: 'block'}}>
       <div className='page_content home'>
-
     <p className='home_aboutme'>
       <span>Born in 1993,</span>
       <span>in Miami, Florida</span>
@@ -22,6 +27,7 @@ function Home() {
       </p>
       </div>
     </section>
+      </motion.div>
   );
 }
 

@@ -3,28 +3,28 @@
     z-index: 10;
     left: calc(var(--pad)*2);
     top: calc(var(--pad)*2);
-    line-height: 1.1;
 }
 
 .mainHeader_title {
     margin: -0.1em 0 0 -0.04em;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 5vh;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
-@media(min-width: 1280px) {
-    .mainHeader_title {
-        font-size:60px;
-    }
-}
 .mainHeader_label {
     margin-top: 5px;
-    font-weight: 400;
+    font-weight: 900;
+    font-size: 3vh;
 }
 
 .mainHeader_nav {
-    margin-top: 50px;
+    margin-top: 40px;
+    font-size: 3vh;
+    font-weight: 700;
 }
+
 
 .mainHeader_nav ol {
     display: flex;
@@ -34,24 +34,11 @@
     margin: 0;
 }
 
-.mainHeader_nav ul {
-    padding: 0;
-    margin: 0;
-}
-
-@media(hover: hover) {
-    .mainHeader_nav ol ul ._text:hover {
-        opacity:.25;
-    }
-}
-
 a {
     text-decoration: none;
     color: inherit;
     background-color: transparent;
-}
+} 
 
-._text._active {
-    pointer-events: none;
-  }
+
   

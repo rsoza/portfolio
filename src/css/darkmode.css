@@ -15,7 +15,8 @@
   align-items: center;
   display: flex;
   column-gap: 3px;
-  font-weight: 400;
+  font-weight: 900;
+  font-size: 13px;
   text-transform: uppercase;
 }
 .dark_mode_input[type=radio]  {
@@ -27,6 +28,7 @@
   width: 10px;
   height: 10px;
   margin: 2px;
+  transform: scale(1.3);
 }
 
 .dark_mode_input[type=radio]:checked {
