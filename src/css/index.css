@@ -210,8 +210,12 @@ html {
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.7 ease-in-out;
 }
 
+h1 {
+  font-size: 30px;
+}
 
 p {
   font-size: 14px;

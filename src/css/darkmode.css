@@ -16,7 +16,6 @@
   display: flex;
   column-gap: 3px;
   font-weight: 900;
-  font-size: 13px;
   text-transform: uppercase;
 }
 .dark_mode_input[type=radio]  {
