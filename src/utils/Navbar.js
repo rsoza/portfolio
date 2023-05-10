@@ -37,9 +37,9 @@ function Navbar() {
             <Link to="/">{location.pathname === "/" ? "●" : "Home"}</Link>
           </motion.ul>
           <motion.ul
-          variants={linkVariants}
-          animate="visible"
-          exit="hidden"
+            variants={linkVariants}
+            animate="visible"
+            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
@@ -54,9 +54,9 @@ function Navbar() {
             </Link>
           </motion.ul>
           <motion.ul
-          variants={linkVariants}
-          animate="visible"
-          exit="hidden"
+            variants={linkVariants}
+            animate="visible"
+            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
@@ -71,19 +71,36 @@ function Navbar() {
             </Link>
           </motion.ul>
           <motion.ul
-          variants={linkVariants}
-          animate="visible"
-          exit="hidden"
+            variants={linkVariants}
+            animate="visible"
+            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             style={
               location.pathname === "/contact"
                 ? { pointerEvents: "none" }
-                : { pointerEvents: "auto"}
+                : { pointerEvents: "auto" }
             }
           >
             <Link to="/contact">
+              {location.pathname === "/contact" ? "●" : "Contact"}
+            </Link>
+          </motion.ul>
+          <motion.ul
+            variants={linkVariants}
+            animate="visible"
+            exit="hidden"
+            whileHover={{ x: 5 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            style={
+              location.pathname === "/contact"
+                ? { pointerEvents: "none" }
+                : { pointerEvents: "auto" }
+            }
+          >
+            <Link to="/projects/project">
               {location.pathname === "/contact" ? "●" : "Contact"}
             </Link>
           </motion.ul>

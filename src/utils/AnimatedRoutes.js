@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Info from "../pages/Info";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
+// import ProjectDetailsPage from "../components/Project";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function AnimatedRoutes() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/info" element={<Info />} />
         <Route exact path="/projects" element={<Projects />} />
+        {/* <Route exact path="/projects/:name" element={<ProjectDetailsPage />} /> */}
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
