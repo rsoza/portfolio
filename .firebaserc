@@ -1,6 +1,7 @@
 {
   "projects": {
-    "y": "portfolio-c42a2"
+    "y": "portfolio-c42a2",
+    "default": "portfolio-c42a2"
   },
   "targets": {},
   "etags": {}

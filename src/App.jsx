@@ -15,10 +15,10 @@ function App() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div class="air air1"></div>
-        <div class="air air2"></div>
-        <div class="air air3"></div>
-        <div class="air air4"></div>
+        <div className="air air1"></div>
+        <div className="air air2"></div>
+        <div className="air air3"></div>
+        <div className="air air4"></div>
       </motion.div>
       <div className="borders" id="Borders">
         <div className="border_top" />

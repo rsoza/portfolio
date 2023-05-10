@@ -210,7 +210,6 @@ html {
 * {
   margin: 0;
   padding: 0;
-  transition: all 0.7 ease-in-out;
 }
 
 h1 {
@@ -222,3 +221,10 @@ p {
   font-weight: 900;
 }
 
+
+
+h2,h3,h4,h5,h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    display: block;
+}
