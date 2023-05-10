@@ -1,6 +1,6 @@
 :root{
   --body_background: hsl(0, 0%, 88%);
-  --body_color: hsl(0, 0%, 3%);
+  --body_color: hsl(0, 0%, 8%);
   --container: hsl(0, 0%, 90%);
   --pad: max(20px, 1vmin);
   --filter: none;
@@ -8,7 +8,7 @@
 
 [data-theme='dark']{
   --body_background: hsl(0, 0%, 0%);
-  --container: hsl(0, 0%, 3%);
+  --container: hsl(0, 0%, 8%);
   --body_color: white;
   --filter: invert(0.8);
 } 
@@ -232,3 +232,6 @@ h2,h3,h4,h5,h6 {
 ::-webkit-scrollbar {
   display: none;
 }
+
+
+

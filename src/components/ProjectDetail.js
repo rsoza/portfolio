@@ -1,8 +1,12 @@
+import { motion } from "framer-motion";
+
 function ProjectDetailsPage() {
     return(
-        <div>
+        <motion.div
+        bg="var(--body_color)"
+        >
             hello
-        </div>
+        </motion.div>
     )
     
 }

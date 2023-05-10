@@ -12,17 +12,18 @@ function Home() {
         >
           <p className="home_aboutme">
             <span>Originally from</span>
-            <span>Miami, Florida, I</span>
+            <span>Miami, Florida,</span>
             <span>moved to Kansas</span>
-            <span>in early 2021 with</span>
-            <span>a mission to learn</span>
-            <span>and grow. The</span>
+            <span>in early 2021 to</span>
+            <span>complete my degree</span>
+            <span>at Wichita State</span>
+            <span> University. Quickly</span>
+            <span>learned that the</span>
             <span>possibilities in</span>
             <span>Computer Science</span>
-            <span>are endless, and am</span>
-            <span>pursuing new</span>
-            <span>expriences within</span>
-            <span>this releam until</span>
+            <span>are endless. I</span>
+            <span>am pursuing new</span>
+            <span>expriences until</span>
             <span>I find the right fit.</span>
           </p>
         </motion.div>
