@@ -5,10 +5,6 @@ import "../css/navbar.css";
 function Navbar() {
   const location = useLocation();
 
-  const linkVariants = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -10 },
-  };
   return (
     <header className="mainHeader" id="MainHeader">
       <motion.div
@@ -22,7 +18,6 @@ function Navbar() {
       <nav className="mainHeader_nav">
         <ol>
           <motion.ul
-            variants={linkVariants}
             animate="visible"
             exit="hidden"
             whileHover={{ x: 5 }}
@@ -37,7 +32,6 @@ function Navbar() {
             <Link to="/">{location.pathname === "/" ? "●" : "Home"}</Link>
           </motion.ul>
           <motion.ul
-            variants={linkVariants}
             animate="visible"
             exit="hidden"
             whileHover={{ x: 5 }}
@@ -54,7 +48,6 @@ function Navbar() {
             </Link>
           </motion.ul>
           <motion.ul
-            variants={linkVariants}
             animate="visible"
             exit="hidden"
             whileHover={{ x: 5 }}
@@ -71,7 +64,6 @@ function Navbar() {
             </Link>
           </motion.ul>
           <motion.ul
-            variants={linkVariants}
             animate="visible"
             exit="hidden"
             whileHover={{ x: 5 }}
@@ -84,23 +76,6 @@ function Navbar() {
             }
           >
             <Link to="/contact">
-              {location.pathname === "/contact" ? "●" : "Contact"}
-            </Link>
-          </motion.ul>
-          <motion.ul
-            variants={linkVariants}
-            animate="visible"
-            exit="hidden"
-            whileHover={{ x: 5 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
-            style={
-              location.pathname === "/contact"
-                ? { pointerEvents: "none" }
-                : { pointerEvents: "auto" }
-            }
-          >
-            <Link to="/projects/project">
               {location.pathname === "/contact" ? "●" : "Contact"}
             </Link>
           </motion.ul>
