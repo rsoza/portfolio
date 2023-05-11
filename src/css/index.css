@@ -9,7 +9,7 @@
 [data-theme='dark']{
   --body_background: hsl(0, 0%, 0%);
   --container: hsl(0, 0%, 8%);
-  --body_color: white;
+  --body_color: hsl(0, 0%, 88%);
   --filter: invert(0.8);
 } 
 

@@ -7,12 +7,11 @@ import Home from "../pages/Home";
 import Info from "../pages/Info";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
-import DarkMode from "./DarkMode";
+import DarkMode from "../components/DarkMode";
 import Navbar from "./Navbar";
 
 function AnimatedRoutes() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <AnimatePresence>

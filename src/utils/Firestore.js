@@ -8,7 +8,6 @@ export async function getGifs() {
   const querySnapshot = await getDocs(gifRef);
 
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, ' => ', doc.data());
     gifs.push({ id: doc.id, ...doc.data() });
   });
 

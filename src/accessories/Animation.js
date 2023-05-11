@@ -104,16 +104,4 @@ const AnimatedTextWord = ({ text }) => {
 };
 
 
-const AnimatedDownDiv = ({child}) => {
-  return(
-    <motion.div
-    initial={{ y: -1000 }}
-    animate={{ y: 0 }}
-    transition={{ duration: 1 }}
-    >
-      {child}
-    </motion.div>
-  )
-}
-
-export {AnimatedTextCharacter, AnimatedTextWord, AnimatedDownDiv};
+export {AnimatedTextCharacter, AnimatedTextWord};

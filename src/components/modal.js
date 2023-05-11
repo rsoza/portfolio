@@ -84,12 +84,11 @@ function ModalComponent() {
             <ModalOverlay backdropFilter="blur(10px) hue-rotate(90deg)" />
             {timeoutSet && (
               
-              <ModalContent maxH="650" borderRadius="10%">
+              <ModalContent maxH="99vh">
                 <ModalCloseButton
                   border="transparent"
-                  background="var(--body_color)"
-                  opacity="0.8"
-                  color="var(--body_background)"
+                  background="var(--container)"
+                  color="var(--body_color)"
                   fontFamily="Cormorant"
                   fontWeight="500"
                   fontSize="16px"
@@ -107,18 +106,13 @@ function ModalComponent() {
                     back to projects
                   </motion.div>
                 </ModalCloseButton>
-                <motion.div
                 
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1 }}>
-                <ModalBody pl="50" pr="50" overflowX="hidden">
+                <ModalBody overflowX="hidden">
                   <ProjectDetailsPage
                     project={selectedProject}
                     isOpen={isOpen}
                     />
                 </ModalBody>
-                    </motion.div>
               </ModalContent>
             )}
           </Modal>
