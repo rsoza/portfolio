@@ -1,7 +1,7 @@
 import { Container, Center, Flex, Box, Text } from "@chakra-ui/react";
 import "../css/pages.css";
-import { motion  } from "framer-motion";
-import AnimatedTextWord from "../utils/AnimatedText";
+import { motion } from "framer-motion";
+import {AnimatedTextWord} from "../accessories/Animation";
 
 function ProjectDetailsPage({ project, isOpen }) {
   return (
@@ -40,7 +40,7 @@ function ProjectDetailsPage({ project, isOpen }) {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0, transition: { type: "spring" } }}
             exit={{ opacity: 0, x: 50, transition: { type: "spring" } }}
-            whileTap={{ scale: 1.7, x:60 }}
+            whileTap={{ scale: 1.7, x: 60 }}
           >
             <Box>
               <img className="animated-gif" src={project.gif1} alt="gif1" />
