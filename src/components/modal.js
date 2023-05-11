@@ -6,98 +6,14 @@ import {
   ModalCloseButton,
   useDisclosure,
   Button,
-  Container,
-  Center,
-  Flex,
-  Box,
-  Text,
-  Spacer,
+  Text
 } from "@chakra-ui/react";
 import "../css/pages.css";
 import React, { useState, useEffect } from "react";
 import { getGifs } from "../utils/Firestore";
 import { motion } from "framer-motion";
-
-function ProjectDetailsPage({ project, isOpen }) {
-
-  return (
-      <Container>
-        <Center p="20">
-          <Flex>
-            <Box textAlign="center">
-              {isOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.5, type: "spring" },
-                  }}
-                >
-                  <Text className="h1">{project.projectName}</Text>
-                </motion.div>
-              )}
-            </Box>
-          </Flex>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <Center lineHeight="1.3" textAlign="justify" pb="15">
-          <Box>
-            <Text fontSize="16px">{project.description}</Text>
-          </Box>
-        </Center>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0, transition: { type: "spring" } }}
-          exit={{ opacity: 0, x: 50, transition: { type: "spring" } }}
-        >
-          <Box>
-            <img className="animated-gif" src={project.gif1} alt="gif1" />
-          </Box>
-        </motion.div>
-        <Spacer />
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0, transition: { type: "spring" } }}
-          exit={{ opacity: 0, x: 50, transition: { type: "spring" } }}
-        >
-          <Box>
-            <img className="animated-gif" src={project.gif2} alt="gif2" />
-          </Box>
-        </motion.div>
-      </Container>
-  );
-}
+import AnimatedTextWord from "../utils/AnimatedText";
+import ProjectDetailsPage from "./ProjectDetail";
 
 function ModalComponent() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -118,16 +34,16 @@ function ModalComponent() {
     <>
       {projects.map((project) => (
         <motion.div
+          textAlign="right"
           whileHover={{ x: -5 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0, transition: { type: "spring" } }}
-          exit={{ opacity: 0, x: 50, transition: { type: "spring" } }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           <Button
-            display="inline-block"
-            textAlign="right"
+            display="block"
             border="transparent"
             background="transparent"
             onClick={() => {
@@ -135,26 +51,52 @@ function ModalComponent() {
               onOpen();
             }}
           >
-            <Text className="h1">{project.projectName}</Text>
-
+            <Text className="h1">
+              <AnimatedTextWord text={project.projectName} />
+            </Text>
             <Text className="h2">
-              {project.projectYear} / {project.projectType} /{" "}
+              {project.projectYear} / {project.projectType} /
               {project.projectLanguages}
             </Text>
           </Button>
         </motion.div>
       ))}
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
-        <ModalOverlay backdropFilter="blur(10px) hue-rotate(90deg)" />
-        <Center>
-          <ModalContent>
-            <ModalCloseButton border="transparent" background="transparent" />
-            <ModalBody p='20' height="50%" overflowX="scroll">
-              <ProjectDetailsPage project={selectedProject} isOpen={isOpen} />
-            </ModalBody>
-          </ModalContent>
-        </Center>
-      </Modal>
+      <div className="modal">
+        <div className="modal-dialog">
+          <Modal onClose={onClose} isOpen={isOpen}>
+            <ModalOverlay
+              backdropFilter="blur(10px) hue-rotate(90deg)"
+            />
+
+            <ModalContent maxH="650" borderRadius="10%">
+              <ModalCloseButton
+                border="transparent"
+                background="var(--body_color)"
+                opacity="0.8"
+                color="var(--body_background)"
+                fontFamily="Cormorant"
+                fontWeight="500"
+                fontSize="16px"
+                justifyContent="left"
+                p="30"
+                textTransform='uppercase'
+              >
+            <motion.div
+          textAlign="right"
+          whileHover={{ x: -5 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+                back to projects
+              </motion.div>
+              </ModalCloseButton>
+              <ModalBody pl="50" pr="50" overflowX="hidden">
+                <ProjectDetailsPage project={selectedProject} isOpen={isOpen} />
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+        </div>
+      </div>
     </>
   );
 }

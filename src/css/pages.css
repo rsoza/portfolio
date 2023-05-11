@@ -9,9 +9,6 @@
     right: calc(var(--pad)*2);
     bottom: calc(var(--pad)*6);
     white-space: nowrap;
-}
-
-.home_aboutme {
     line-height: 1.5;
 }
 
@@ -31,9 +28,6 @@
     }
 }
 
-.project_section+.project_section {
-    margin-top: 100px
-}
 
 .project_heading {
     font-weight: 400;
@@ -70,6 +64,8 @@ p {
 }
 
 img.animated-gif{
+    /* max-width: 90%;
+  max-height: 90%; */
     width: 200px;
     height: auto;
     border-radius: 10%;
@@ -89,3 +85,22 @@ img.animated-gif{
     color: var(--body_color);
 }
 
+body .modal-dialog { /* Width */
+    max-width: 100%;
+    width: auto !important;
+    display: inline-block;
+}
+.modal {
+    padding: 100px;
+  }
+  
+  .modal-open .modal {
+     z-index: 1050;
+  }
+
+  .text {
+    color: var(--body_color);
+    font-weight: 100;
+    font-size: 18px;
+    font-family: Cormorant;
+  }
