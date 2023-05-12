@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import "../css/navbar.css";
+import { AnimatedTextBlock } from "../accessories/Animation";
 
 function Navbar() {
   const location = useLocation();
@@ -13,7 +14,7 @@ function Navbar() {
         onHoverEnd={(e) => {}}
       >
         <h1 className="mainHeader_title">
-          Rebecca Soza</h1>
+          <AnimatedTextBlock text={"Rebecca Soza"} /></h1>
         <p className="mainHeader_label">Computer Science Student</p>
       </motion.div>
       <nav className="mainHeader_nav">

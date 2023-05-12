@@ -228,3 +228,18 @@ h2,h3,h4,h5,h6 {
 
 
 
+#Enter {
+  column-gap: .5em;
+  font-size: 30px;
+  font-family: Cormorant;
+}
+
+._t1 {
+  font-weight: 400;
+  font-size: 30px;
+  font-family: Cormorant;
+}
+
+._t2 {
+  font-weight: 200;
+}
