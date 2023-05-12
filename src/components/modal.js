@@ -15,6 +15,7 @@ import { AnimatedTextWord } from "../accessories/Animation";
 import ProjectDetailsPage from "./ProjectDetail";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import WorkDetailPage from "./WorkDetail";
+import SchoolDetailPage from './SchoolDetail';
 
 function ModalComponent(props) {
   const [selectedElement, setSelectElement] = useState(null);
@@ -62,8 +63,9 @@ function ModalComponent(props) {
               <AnimatedTextWord text={element.projectName} />
             </Text>
             <Text className="h2">
-              {element.projectYear} / {element.projectType} /
-              {element.projectLanguages}
+              {element.projectYear} / {element.projectType}{" "}
+              {props.type === "projects" && "/" + element.projectLanguages}
+              {props.type === "schools" && "/" + element.projectLanguages}
             </Text>
           </Button>
         </motion.div>
@@ -84,26 +86,29 @@ function ModalComponent(props) {
                   justifyContent="left"
                   p="30"
                   textTransform="uppercase"
-                  >
+                >
                   <motion.div
                     whileHover={{ x: -5 }}
                     onHoverStart={(e) => {}}
                     onHoverEnd={(e) => {}}
-                    >
+                  >
                     <ArrowBackIcon mr="20" />
                     back to experience
                   </motion.div>
                 </ModalCloseButton>
                 <ModalBody overflowX="hidden">
-                  { props.type === "projects" &&
+                  {props.type === "projects" && (
                     <ProjectDetailsPage
-                    project={selectedElement}
-                    isOpen={isOpen}
+                      project={selectedElement}
+                      isOpen={isOpen}
                     />
-                  }
-                  { props.type === 'work' &&
+                  )}
+                  {props.type === "work" && (
                     <WorkDetailPage work={selectedElement} />
-                  }
+                  )}
+                  {props.type === "schools" && (
+                    <SchoolDetailPage school={selectedElement} />
+                  )}
                 </ModalBody>
               </ModalContent>
             )}

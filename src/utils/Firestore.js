@@ -15,15 +15,29 @@ export async function getGifs() {
 };
 
 export async function getWork() {
-  const worfRef = query(collection(db, 'work'));
+  const wordRef = query(collection(db, 'work'));
   const work = [];
   
-  const querySnapshot = await getDocs(worfRef);
+  const querySnapshot = await getDocs(wordRef);
 
   querySnapshot.forEach((doc) => {
-    console.log(doc)
+    console.log(doc.id, ' => ', doc.data());
     work.push({ id: doc.id, ...doc.data() });
   });
 
   return work;
+};
+
+export async function getSchool() {
+  const schoolRef = query(collection(db, 'school'));
+  const school = [];
+  
+  const querySnapshot = await getDocs(schoolRef);
+
+  querySnapshot.forEach((doc) => {
+    console.log(doc.id, ' => ', doc.data());
+    school.push({ id: doc.id, ...doc.data() });
+  });
+
+  return school;
 };

@@ -2,26 +2,24 @@ import ModalComponent from "../components/modal";
 import "../css/pages.css";
 import { motion } from "framer-motion";
 import React, {useEffect, useState} from "react";
-import { getGifs, getWork } from "../utils/Firestore";
+import { getGifs, getSchool, getWork } from "../utils/Firestore";
 
 function Experience() {
   const [projects, setProjects] = useState([]);
   const [workExp, setWorkExp] = useState([]);
+  const [schools, setSchools] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       const projectsInfo = await getGifs();
       setProjects(projectsInfo);
+      const workInfo = await getWork();
+      setWorkExp(workInfo);
+      const schoolInfo = await getSchool();
+      setSchools(schoolInfo);
     };
     fetchProjects();
 
-    const fetchWorkExperience = async () => {
-      const workInfo = await getWork();
-      setWorkExp(workInfo);
-    };
-    fetchWorkExperience();
-
-    return () => {};
   }, []);
 
   return (
@@ -31,7 +29,6 @@ function Experience() {
           className="project_section"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transform: {type: 'spring'}}}
-          exit={{ opacity: 0 }}
         >
           <h2 className="project_heading">■ Work (Background & Achievements)</h2>
           <div 
@@ -48,7 +45,7 @@ function Experience() {
           <h2 className="project_heading">■ School (Degree & Classes)</h2>
           <div 
           className="project_list">
-            {/* <ModalComponent component={component} type={"projects"} /> */}
+            <ModalComponent component={schools} type={"schools"} />
           </div>
         </motion.div>
         <motion.div

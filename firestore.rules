@@ -4,5 +4,13 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    match /work/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /school/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
   }
 }
