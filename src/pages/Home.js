@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section className="page" data-page="home" style={{ display: "block" }}>
-      <div className="page_content home">
+    <section>
+      <div className="home">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -21,10 +21,10 @@ function Home() {
             <span>learned that the</span>
             <span>possibilities in</span>
             <span>Computer Science</span>
-            <span>are endless. I</span>
-            <span>am pursuing new</span>
-            <span>expriences until</span>
-            <span>I find the right fit.</span>
+            <span>are endless. I am</span>
+            <span>pursuing a position in</span>
+            <span>Software Development</span>
+            <span>or Cloud Engineering.</span>
           </p>
         </motion.div>
       </div>
