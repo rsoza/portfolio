@@ -2,7 +2,7 @@ import ModalComponent from "../components/modal";
 import "../css/pages.css";
 import { motion } from "framer-motion";
 
-function Projects() {
+function Experience() {
 
   return (
     <section className="page" data-page="project" style={{ display: "block" }}>
@@ -25,4 +25,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Experience;

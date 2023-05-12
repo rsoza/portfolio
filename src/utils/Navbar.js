@@ -38,13 +38,13 @@ function Navbar() {
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             style={
-              location.pathname === "/projects"
+              location.pathname === "/experience"
                 ? { pointerEvents: "none" }
                 : { pointerEvents: "auto" }
             }
           >
-            <Link to="/projects">
-              {location.pathname === "/projects" ? "●" : "Projects"}
+            <Link to="/experience">
+              {location.pathname === "/experience" ? "●" : "Experience"}
             </Link>
           </motion.ul>
           <motion.ul
