@@ -45,7 +45,6 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-color: var(--body_background);
   color: var(--body_color);
   white-space: nowrap;
@@ -53,7 +52,7 @@ html {
   transition-duration: .9s;
   overflow-X: auto;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
-  
+  scroll-behavior: smooth;
 }
 
 #Container {
@@ -171,7 +170,7 @@ html {
 .frame_border {
   position: absolute;
   background-color: var(--body_color);
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .frame_left {

@@ -31,7 +31,30 @@ function Experience() {
           className="project_list">
             <ModalComponent component={component} type={"projects"} />
           </div>
-
+        </motion.div>
+        <motion.div
+          className="project_section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transform: {type: 'spring'}}}
+          exit={{ opacity: 0 }}
+        >
+          <h2 className="project_heading">■ Projects (Design & Develop)</h2>
+          <div 
+          className="project_list">
+            <ModalComponent component={component} type={"projects"} />
+          </div>
+        </motion.div>
+        <motion.div
+          className="project_section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transform: {type: 'spring'}}}
+          exit={{ opacity: 0 }}
+        >
+          <h2 className="project_heading">■ Projects (Design & Develop)</h2>
+          <div 
+          className="project_list">
+            <ModalComponent component={component} type={"projects"} />
+          </div>
         </motion.div>
       </div>
     </section>

@@ -34,15 +34,11 @@
     margin-bottom: 40px;
 }
 
-.project_list {
-    margin-top: 50px
-}
 
 .project_list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 15px
 }
 
 p {
