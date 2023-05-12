@@ -3,6 +3,7 @@ import "../css/pages.css";
 import React, { useEffect, useState } from "react";
 import { getGifs} from "../utils/Firestore";
 import { motion } from "framer-motion";
+import { Text } from "@chakra-ui/react";
 function Experience() {
   const [projects, setProjects] = useState([]);
 
@@ -24,7 +25,7 @@ function Experience() {
     exit={{ opacity: 0 }}>
         <div className="page_content project">
           <div className="project_section">
-            <h2 className="project_heading">■ Projects (Design & Develop)</h2>
+            <Text className="project_heading">■ Projects (Design & Develop)</Text>
             <div className="project_list">
               <ModalComponent component={projects} type={"projects"} />
             </div>
