@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { AnimatedTextWord } from "../accessories/Animation";
 import ProjectDetailsPage from "./ProjectDetail";
 import { ArrowBackIcon } from "@chakra-ui/icons";
+import WorkDetailPage from "./WorkDetail";
 
 function ModalComponent(props) {
   const [selectedElement, setSelectElement] = useState(null);
@@ -41,7 +42,6 @@ function ModalComponent(props) {
     <>
       {props.component.map((element) => (
         <motion.div
-          textAlign="right"
           whileHover={{ x: -5 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
@@ -86,7 +86,6 @@ function ModalComponent(props) {
                   textTransform="uppercase"
                   >
                   <motion.div
-                    textAlign="right"
                     whileHover={{ x: -5 }}
                     onHoverStart={(e) => {}}
                     onHoverEnd={(e) => {}}
@@ -101,6 +100,9 @@ function ModalComponent(props) {
                     project={selectedElement}
                     isOpen={isOpen}
                     />
+                  }
+                  { props.type === 'work' &&
+                    <WorkDetailPage work={selectedElement} />
                   }
                 </ModalBody>
               </ModalContent>

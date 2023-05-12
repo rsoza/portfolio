@@ -13,3 +13,17 @@ export async function getGifs() {
 
   return gifs;
 };
+
+export async function getWork() {
+  const worfRef = query(collection(db, 'work'));
+  const work = [];
+  
+  const querySnapshot = await getDocs(worfRef);
+
+  querySnapshot.forEach((doc) => {
+    console.log(doc)
+    work.push({ id: doc.id, ...doc.data() });
+  });
+
+  return work;
+};

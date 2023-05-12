@@ -13,7 +13,7 @@
 }
 
 .home_aboutme span {
-    display: block
+    display: block;
 }
 
 .project {
@@ -86,7 +86,7 @@ img.animated-gif{
 }
 
 
-body .modal-dialog { /* Width */
+body .modal-dialog { 
     max-width: 100%;
     width: auto !important;
     display: inline-block;

@@ -10,11 +10,9 @@ import {
 } from "./ProjectParts";
 
 function ProjectDetailsPage({ project }) {
-  console.log(project);
   return (
     <Container>
       <Header projectName={project.projectName} />
-
           <Description
             description={project.description}
             tech={project.techStack}
