@@ -21,7 +21,7 @@ function Home() {
             <span>learned that the</span>
             <span>possibilities in</span>
             <span>Computer Science</span>
-            <span>are endless. I am</span>
+            <span>are endless. Currently</span>
             <span>pursuing a position in</span>
             <span>Software Development</span>
             <span>or Cloud Engineering.</span>

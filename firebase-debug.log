@@ -1,0 +1,61 @@
+[debug] [2023-05-12T19:59:18.351Z] ----------------------------------------------------------------------
+[debug] [2023-05-12T19:59:18.353Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rsoza\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-12T19:59:18.353Z] CLI Version:   11.30.0
+[debug] [2023-05-12T19:59:18.353Z] Platform:      win32
+[debug] [2023-05-12T19:59:18.353Z] Node Version:  v19.2.0
+[debug] [2023-05-12T19:59:18.354Z] Time:          Fri May 12 2023 14:59:18 GMT-0500 (Central Daylight Time)
+[debug] [2023-05-12T19:59:18.354Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-12T19:59:18.408Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-12T19:59:18.408Z] > authorizing via signed-in user (bsoza93@gmail.com)
+[debug] [2023-05-12T19:59:18.408Z] [iam] checking project portfolio-c42a2 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-12T19:59:18.410Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-c42a2:testIamPermissions [none]
+[debug] [2023-05-12T19:59:18.410Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-c42a2:testIamPermissions x-goog-quota-user=projects/portfolio-c42a2
+[debug] [2023-05-12T19:59:18.410Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-c42a2:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-12T19:59:18.845Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-c42a2:testIamPermissions 200
+[debug] [2023-05-12T19:59:18.845Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-c42a2:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-12T19:59:18.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-c42a2 [none]
+[debug] [2023-05-12T19:59:19.255Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-c42a2 200
+[debug] [2023-05-12T19:59:19.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-c42a2 {"projectId":"portfolio-c42a2","projectNumber":"954007543991","displayName":"portfolio","name":"projects/portfolio-c42a2","resources":{"hostingSite":"portfolio-c42a2","realtimeDatabaseInstance":"portfolio-c42a2-default-rtdb","storageBucket":"portfolio-c42a2.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9fee84e0-306d-4b61-a6e3-201dd79103d1"}
+[info] 
+[info] === Deploying to 'portfolio-c42a2'...
+[info] 
+[info] i  deploying firestore, hosting 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-05-12T19:59:19.260Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2:test [none]
+[debug] [2023-05-12T19:59:19.260Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2:test [omitted]
+[debug] [2023-05-12T19:59:19.543Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2:test 200
+[debug] [2023-05-12T19:59:19.543Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2:test {"issues":[{"sourcePosition":{"fileName":"firestore.rules"},"description":"Ruleset uses old version (version [1]). Please update to the latest version (version [2]).","severity":"WARNING"}]}
+[warn] !  [W] undefined:undefined - Ruleset uses old version (version [1]). Please update to the latest version (version [2]). 
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-05-12T19:59:19.548Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-c42a2/versions [none]
+[debug] [2023-05-12T19:59:19.548Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-c42a2/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-12T19:59:20.277Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-c42a2/versions 200
+[debug] [2023-05-12T19:59:20.277Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-c42a2/versions {"name":"projects/954007543991/sites/portfolio-c42a2/versions/f67c53c88933d31d","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  firestore: deploying indexes... 
+[debug] [2023-05-12T19:59:20.278Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/releases pageSize=10&pageToken=
+[debug] [2023-05-12T19:59:20.414Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/releases 200
+[debug] [2023-05-12T19:59:20.414Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/releases {"releases":[{"name":"projects/portfolio-c42a2/releases/cloud.firestore","rulesetName":"projects/portfolio-c42a2/rulesets/5953070a-5cb9-4596-8470-f79ba4d6d740","createTime":"2023-05-09T21:36:37.792924Z","updateTime":"2023-05-12T19:58:27.840124Z"},{"name":"projects/portfolio-c42a2/releases/firebase.storage/portfolio-c42a2.appspot.com","rulesetName":"projects/portfolio-c42a2/rulesets/ac0eff68-3566-4c0c-91c4-f73e2bc619df","createTime":"2023-05-09T22:02:17.660519Z","updateTime":"2023-05-09T22:02:17.660519Z"}]}
+[debug] [2023-05-12T19:59:20.422Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/rulesets/5953070a-5cb9-4596-8470-f79ba4d6d740 [none]
+[debug] [2023-05-12T19:59:20.659Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/rulesets/5953070a-5cb9-4596-8470-f79ba4d6d740 200
+[debug] [2023-05-12T19:59:20.659Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/portfolio-c42a2/rulesets/5953070a-5cb9-4596-8470-f79ba4d6d740 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[portfolio-c42a2]: beginning deploy... 
+[info] i  hosting[portfolio-c42a2]: found 8 files in build 
+[debug] [2023-05-12T19:59:20.667Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-12T19:59:21.145Z] [hosting] hash cache [YnVpbGQ] stored for 8 files
+[debug] [2023-05-12T19:59:21.145Z] [hosting][hash queue][FINAL] {"max":473,"min":1,"avg":65.75,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":476}
+[debug] [2023-05-12T19:59:21.146Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/954007543991/sites/portfolio-c42a2/versions/f67c53c88933d31d:populateFiles [none]
+[debug] [2023-05-12T19:59:21.146Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/954007543991/sites/portfolio-c42a2/versions/f67c53c88933d31d:populateFiles {"files":{"/favicon.ico":"9e4330903d4d4bbbf5b4c455a83a6b0b9e7a30ccd4b3f7b3627ccbb6c13ebfbd\r","/asset-manifest.json":"0255edfc83442d86f9d324c6d2f0fe5324f6bbf3451c1353b2af055574068506","/index.html":"c45dbca3441060eca1580b8cf4e8d3d4ab8bb5b266df1a18bf83058d381b98db","/static/css/main.14afd8e1.css":"cf5beda777123430634af8d6296d788407afd781a4bf40745e5efa2fb2612fc8","/static/js/main.52b12e23.js.LICENSE.txt":"bb3cd2d429bc539ae8cebdc3a29ea1ec265bdde4f1d676d0f14296e38e9b2971","/static/css/main.14afd8e1.css.map":"f24090f9cfb8a0bfd2831b3c503b19264ad07b6b58775241dfb4e1adacae8169","/static/js/main.52b12e23.js":"72e42fdef502f6d1f05a336066b6b7199331e3c9c729c908cb6c3b5688334ab9","/static/js/main.52b12e23.js.map":"bbee55021d8fafe32214320530e1d1d8c2a47ba9c40a0f106e2a60bd66b7c6ec"}}
+[debug] [2023-05-12T19:59:21.403Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/954007543991/sites/portfolio-c42a2/versions/f67c53c88933d31d:populateFiles 200
+[debug] [2023-05-12T19:59:21.403Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/954007543991/sites/portfolio-c42a2/versions/f67c53c88933d31d:populateFiles {"uploadRequiredHashes":["c45dbca3441060eca1580b8cf4e8d3d4ab8bb5b266df1a18bf83058d381b98db","72e42fdef502f6d1f05a336066b6b7199331e3c9c729c908cb6c3b5688334ab9","bbee55021d8fafe32214320530e1d1d8c2a47ba9c40a0f106e2a60bd66b7c6ec","0255edfc83442d86f9d324c6d2f0fe5324f6bbf3451c1353b2af055574068506"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files"}
+[debug] [2023-05-12T19:59:21.404Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/c45dbca3441060eca1580b8cf4e8d3d4ab8bb5b266df1a18bf83058d381b98db [none]
+[debug] [2023-05-12T19:59:21.404Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/c45dbca3441060eca1580b8cf4e8d3d4ab8bb5b266df1a18bf83058d381b98db [stream]
+[debug] [2023-05-12T19:59:21.405Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/72e42fdef502f6d1f05a336066b6b7199331e3c9c729c908cb6c3b5688334ab9 [none]
+[debug] [2023-05-12T19:59:21.405Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/72e42fdef502f6d1f05a336066b6b7199331e3c9c729c908cb6c3b5688334ab9 [stream]
+[debug] [2023-05-12T19:59:21.406Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/bbee55021d8fafe32214320530e1d1d8c2a47ba9c40a0f106e2a60bd66b7c6ec [none]
+[debug] [2023-05-12T19:59:21.406Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/bbee55021d8fafe32214320530e1d1d8c2a47ba9c40a0f106e2a60bd66b7c6ec [stream]
+[debug] [2023-05-12T19:59:21.407Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/0255edfc83442d86f9d324c6d2f0fe5324f6bbf3451c1353b2af055574068506 [none]
+[debug] [2023-05-12T19:59:21.407Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-c42a2/versions/f67c53c88933d31d/files/0255edfc83442d86f9d324c6d2f0fe5324f6bbf3451c1353b2af055574068506 [stream]
+[debug] [2023-05-12T19:59:21.407Z] [hosting][populate queue][FINAL] {"max":260,"min":260,"avg":260,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":263}
+[debug] [2023-05-12T19:59:21.407Z] [hosting] uploads queued: 4
