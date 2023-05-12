@@ -1,11 +1,12 @@
 
 function Info() {
   return (
-    <section id='info'>
+    <div>
+
     <p>
       INFO WIP
       </p>
-    </section>
+    </div>
   );
 }
 

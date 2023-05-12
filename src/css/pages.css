@@ -17,7 +17,7 @@
 }
 
 .project {
-    padding: calc(var(--pad)*2 + 90px) calc(var(--pad)*2);
+    padding: calc(var(--pad)*2 + 180px) calc(var(--pad)*2);
     text-align: right;
     white-space: nowrap;
 }
@@ -93,7 +93,7 @@ body .modal-dialog {
 }
 
 .modal {
-    padding: 50px;
+    padding: 100px;
 }
   
 .modal-open .modal {

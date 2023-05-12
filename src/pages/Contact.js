@@ -1,14 +1,13 @@
 
 function Contact() {
   return (
-<section id='contact'>
 
+<div>
 
     <p>
       CONTACT WIP
       </p>
-
-</section>
+</div>
 
   );
 }

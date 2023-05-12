@@ -116,7 +116,7 @@ const PhotoCarousel = (props) => {
         >
           {photoArray.map((photo) => {
             return (
-              <motion.div key={photo}>
+              <motion.div key={photo.id}>
                 <img src={photo} className="item" alt="" />
               </motion.div>
             );
@@ -189,9 +189,9 @@ const SkillsDev = (props) => {
       </Box>
       <Box pb="40">
         <ul className="text">
-          {skillsArray.map((skill)=> {
+          {skillsArray.map((skill,index)=> {
             return(
-              <li className="skill">{skill}.</li>
+              <li className="skill" key={index}>{skill}.</li>
             );
           })}
         </ul>

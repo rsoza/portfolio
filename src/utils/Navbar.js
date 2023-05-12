@@ -12,7 +12,8 @@ function Navbar() {
         onHoverStart={(e) => {}}
         onHoverEnd={(e) => {}}
       >
-        <h1 className="mainHeader_title">Rebecca Soza</h1>
+        <h1 className="mainHeader_title">
+          Rebecca Soza</h1>
         <p className="mainHeader_label">Computer Science Student</p>
       </motion.div>
       <nav className="mainHeader_nav">
@@ -38,13 +39,13 @@ function Navbar() {
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             style={
-              location.pathname === "/experience"
+              location.pathname === "/projects"
                 ? { pointerEvents: "none" }
                 : { pointerEvents: "auto" }
             }
           >
-            <Link to="/experience">
-              {location.pathname === "/experience" ? "●" : "Experience"}
+            <Link to="/projects">
+              {location.pathname === "/projects" ? "●" : "Projects"}
             </Link>
           </motion.ul>
           <motion.ul

@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section>
+    <motion.div
+    initial={{ opacity: 0,}}
+    animate={{ opacity: 1, transition: {delay:0.5} }}
+    exit={{ opacity: 0 }}
+    >
       <div className="home">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0.5 }}
-        >
           <p className="home_aboutme">
             <span>Originally from</span>
             <span>Miami, Florida,</span>
@@ -26,9 +25,8 @@ function Home() {
             <span>Software Development</span>
             <span>or Cloud Engineering.</span>
           </p>
-        </motion.div>
       </div>
-    </section>
+        </motion.div>
   );
 }
 

@@ -14,8 +14,6 @@ import { motion } from "framer-motion";
 import { AnimatedTextWord } from "../accessories/Animation";
 import ProjectDetailsPage from "./ProjectDetail";
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import WorkDetailPage from "./WorkDetail";
-import SchoolDetailPage from './SchoolDetail';
 
 function ModalComponent(props) {
   const [selectedElement, setSelectElement] = useState(null);
@@ -49,6 +47,7 @@ function ModalComponent(props) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          key={element.id}
         >
           <Button
             display="block"
@@ -63,9 +62,7 @@ function ModalComponent(props) {
               <AnimatedTextWord text={element.projectName} />
             </Text>
             <Text className="h2">
-              {element.projectYear} / {element.projectType}{" "}
-              {props.type === "projects" && "/" + element.projectLanguages}
-              {props.type === "schools" && "/" + element.projectLanguages}
+              {element.projectYear} / {element.projectType} / {element.projectLanguages}
             </Text>
           </Button>
         </motion.div>
@@ -97,18 +94,10 @@ function ModalComponent(props) {
                   </motion.div>
                 </ModalCloseButton>
                 <ModalBody overflowX="hidden">
-                  {props.type === "projects" && (
                     <ProjectDetailsPage
                       project={selectedElement}
                       isOpen={isOpen}
                     />
-                  )}
-                  {props.type === "work" && (
-                    <WorkDetailPage work={selectedElement} />
-                  )}
-                  {props.type === "schools" && (
-                    <SchoolDetailPage school={selectedElement} />
-                  )}
                 </ModalBody>
               </ModalContent>
             )}
