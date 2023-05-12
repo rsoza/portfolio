@@ -10,37 +10,27 @@ import {
 } from "@chakra-ui/react";
 import "../css/pages.css";
 import React, { useState, useEffect } from "react";
-import { getGifs } from "../utils/Firestore";
 import { motion } from "framer-motion";
 import { AnimatedTextWord } from "../accessories/Animation";
 import ProjectDetailsPage from "./ProjectDetail";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 
-function ModalComponent() {
-  const [selectedProject, setSelectedProject] = useState(null);
+function ModalComponent(props) {
+  const [selectedElement, setSelectElement] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [projects, setProjects] = useState([]);
   const [timeoutSet, setTheTimeOut] = useState(false);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const projectsInfo = await getGifs();
-      setProjects(projectsInfo);
-    };
-    fetchProjects();
-
     if (isOpen) {
       const timeOut = setTimeout(() => {
         setTheTimeOut(true);
       }, 400);
       return () => clearTimeout(timeOut);
     }
-
-    return () => {};
   }, [isOpen]);
 
   const onCloseTimeout = () => {
-    setSelectedProject(null);
+    setSelectElement(null);
     setTheTimeOut(null);
     setTimeout(() => {
       onClose();
@@ -49,7 +39,7 @@ function ModalComponent() {
 
   return (
     <>
-      {projects.map((project) => (
+      {props.component.map((element) => (
         <motion.div
           textAlign="right"
           whileHover={{ x: -5 }}
@@ -64,16 +54,16 @@ function ModalComponent() {
             border="transparent"
             background="transparent"
             onClick={() => {
-              setSelectedProject(project);
+              setSelectElement(element);
               onOpen();
             }}
           >
             <Text className="h1">
-              <AnimatedTextWord text={project.projectName} />
+              <AnimatedTextWord text={element.projectName} />
             </Text>
             <Text className="h2">
-              {project.projectYear} / {project.projectType} /
-              {project.projectLanguages}
+              {element.projectYear} / {element.projectType} /
+              {element.projectLanguages}
             </Text>
           </Button>
         </motion.div>
@@ -83,7 +73,6 @@ function ModalComponent() {
           <Modal onClose={onCloseTimeout} isOpen={isOpen}>
             <ModalOverlay backdropFilter="blur(10px) hue-rotate(90deg)" />
             {timeoutSet && (
-              
               <ModalContent maxH="99vh">
                 <ModalCloseButton
                   border="transparent"
@@ -103,15 +92,16 @@ function ModalComponent() {
                     onHoverEnd={(e) => {}}
                     >
                     <ArrowBackIcon mr="20" />
-                    back to projects
+                    back to experience
                   </motion.div>
                 </ModalCloseButton>
-                
                 <ModalBody overflowX="hidden">
-                  <ProjectDetailsPage
-                    project={selectedProject}
+                  { props.type === "projects" &&
+                    <ProjectDetailsPage
+                    project={selectedElement}
                     isOpen={isOpen}
                     />
+                  }
                 </ModalBody>
               </ModalContent>
             )}

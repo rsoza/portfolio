@@ -1,8 +1,21 @@
 import ModalComponent from "../components/modal";
 import "../css/pages.css";
 import { motion } from "framer-motion";
+import React, {useEffect, useState} from "react";
+import { getGifs } from "../utils/Firestore";
 
 function Experience() {
+  const [component, setComponent] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsInfo = await getGifs();
+      setComponent(projectsInfo);
+    };
+    fetchProjects();
+
+    return () => {};
+  }, []);
 
   return (
     <section className="page" data-page="project" style={{ display: "block" }}>
@@ -16,7 +29,7 @@ function Experience() {
           <h2 className="project_heading">■ Projects (Design & Develop)</h2>
           <div 
           className="project_list">
-            <ModalComponent />
+            <ModalComponent component={component} type={"projects"} />
           </div>
 
         </motion.div>
