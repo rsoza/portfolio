@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
 import "../css/pages.css";
 import { useEffect, useRef, useState } from "react";
 
@@ -38,8 +38,8 @@ const Header = (props) => {
 const Description = (props) => {
   return (
     <>
-      <Center pb="15" pt="40">
-        <Box maxWidth="75%" ml="auto" mr="auto">
+      <Center pb="15" pt="60">
+        <Box maxWidth="80%" display="flex">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,38 +57,39 @@ const Description = (props) => {
           </motion.div>
         </Box>
       </Center>
-      <Center>
-        <Flex
-          maxWidth="80%"
-          display="flex"
-          pb="30"
-          m="auto auto 14px"
-          flexWrap="wrap"
-        >
-          <Box p="20">
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 100 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Heading className="smallHeading">Role</Heading>
-            </motion.div>
-            <Text className="text">{props.role}</Text>
-          </Box>
-          <Box p="20">
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 25 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Heading className="smallHeading">Tech Stack</Heading>
-            </motion.div>
-            <Text className="text">{props.tech}</Text>
-          </Box>
-        </Flex>
-      </Center>
+      {/* <Center> */}
+      <Flex
+        maxWidth="50%"
+        display="flex"
+        pb="30"
+        m="auto auto 14px"
+        flexWrap="wrap"
+      >
+        <Box>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0, transition: { type: "keyframe" } }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Heading className="smallHeading">Role</Heading>
+          </motion.div>
+          <Text className="text">{props.role}</Text>
+        </Box>
+        <Spacer />
+        <Box>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0, transition: { type: "keyframe" } }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Heading className="smallHeading">Tech Stack</Heading>
+          </motion.div>
+          <Text className="text">{props.tech}</Text>
+        </Box>
+      </Flex>
+      {/* </Center> */}
     </>
   );
 };
@@ -123,9 +124,9 @@ const PhotoCarousel = (props) => {
         </motion.div>
       </motion.div>
       <Center pt="40" pb="40">
-        <Box maxWidth="75%" ml="auto" mr="auto">
+        <Box maxWidth="80%" display="flex">
           <Text
-            fontSize="2vh"
+            fontSize="2.2vh"
             display="flex"
             lineHeight="1.7"
             className="quote"
@@ -151,24 +152,61 @@ const Gif = (props) => {
             <img className="animated-gif" src={props.gif} alt="gif" />
           </Box>
         </Center>
-      </motion.div>
-      <Box>
-        <Text display="block" className="text" p="20" lineHeight="1.3">
-          {props.description}
-        </Text>
-      </Box>
+            </motion.div>
+        <Center>
+          <Box maxWidth="80%" display="flex">
+            <Text
+              fontFamily="Cormorant"
+              fontSize="2.6vh"
+              display="flex"
+              fontWeight="300"
+              lineHeight="1.7"
+            >
+              {props.description}
+            </Text>
+          </Box>
+        </Center>
     </>
   );
 };
 
-const Footer = (props) => {
+const SkillsDev = (props) => {
+  const skills = props.skills;
+  const skillsArray = skills.split(".");
+
+
+  return (
+    <Flex mr="10%" ml="10%" display="block">
+      <Box pt="20">
+      <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0, transition: { type: "keyframe" } }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+        <Heading className="smallHeading">Skills Developed</Heading>
+        </motion.div>
+      </Box>
+      <Box pb="40">
+        <ul className="text">
+          {skillsArray.map((skill)=> {
+            return(
+              <li className="skill">{skill}.</li>
+            );
+          })}
+        </ul>
+      </Box>
+    </Flex>
+  );
+};
+
+const Footer = () => {
   return (
     <motion.div
       initial={{ y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.7 }}
-      paddingTop="100"
     >
       <Box
         background="var(--body_color)"
@@ -177,6 +215,7 @@ const Footer = (props) => {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        mt='100'
       >
         <Center>
           <motion.div
@@ -195,4 +234,4 @@ const Footer = (props) => {
   );
 };
 
-export { Header, Description, Gif, Footer, PhotoCarousel };
+export { Header, Description, Gif, Footer, PhotoCarousel, SkillsDev };

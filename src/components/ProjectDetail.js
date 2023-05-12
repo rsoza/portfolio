@@ -6,9 +6,10 @@ import {
   Gif,
   Header,
   PhotoCarousel,
+  SkillsDev,
 } from "./ProjectParts";
 
-function ProjectDetailsPage({ project, isOpen }) {
+function ProjectDetailsPage({ project }) {
   console.log(project);
   return (
     <Container>
@@ -24,18 +25,9 @@ function ProjectDetailsPage({ project, isOpen }) {
             description={project.pictureDescription}
           />
           <Gif gif={project.gif1} description={project.gif1Description} />
-   
+          <SkillsDev skills={project.skills} />
+          <Gif gif={project.gif2} description={project.gif2Description} />
       <Footer />
-      {/* <Spacer />
-      <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0, transition: { type: "spring" } }}
-      exit={{ opacity: 0, x: 50, transition: { type: "spring" } }}
-      >
-      <Box>
-      <img className="animated-gif" src={project.gif2} alt="gif2" />
-      </Box>
-    </motion.div> */}
     </Container>
   );
 }
