@@ -6,7 +6,6 @@ function Home() {
     <motion.div
     initial={{ opacity: 0,}}
     animate={{ opacity: 1, transition: {delay:0.5} }}
-    exit={{ opacity: 0 }}
     >
       <div className="home">
           <p className="home_aboutme">

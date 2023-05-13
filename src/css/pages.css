@@ -193,9 +193,9 @@ body .modal-dialog {
     text-decoration: none;
 }
 
-.profile-img {
-    width: 20%;
-    display: fixed;
-    margin-top: 340px;
-    margin-left: 50px;
+.profile {
+  bottom: 0;
+  left: var(--pad);
+  width: 60%;
+  opacity: 0.9;
 }
