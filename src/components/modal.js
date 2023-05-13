@@ -14,19 +14,27 @@ import { motion } from "framer-motion";
 import { AnimatedTextWord } from "../accessories/Animation";
 import ProjectDetailsPage from "./ProjectDetail";
 import { ArrowBackIcon } from "@chakra-ui/icons";
+import { getGifs } from "../utils/Firestore";
 
 function ModalComponent(props) {
   const [selectedElement, setSelectElement] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [timeoutSet, setTheTimeOut] = useState(false);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsInfo = await getGifs();
+      setProjects(projectsInfo);
+    };
     if (isOpen) {
       const timeOut = setTimeout(() => {
         setTheTimeOut(true);
       }, 400);
       return () => clearTimeout(timeOut);
     }
+    fetchProjects();
+    return () => {};
   }, [isOpen]);
 
   const onCloseTimeout = () => {
@@ -39,7 +47,7 @@ function ModalComponent(props) {
 
   return (
     <>
-      {props.component.map((element) => (
+      {projects.map((element) => (
         <motion.div
           whileHover={{ x: -5 }}
           onHoverStart={(e) => {}}
