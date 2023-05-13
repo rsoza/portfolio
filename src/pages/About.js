@@ -1,5 +1,5 @@
 
-function Info() {
+function About() {
   return (
     <div>
 
@@ -10,4 +10,4 @@ function Info() {
   );
 }
 
-export default Info;
+export default About;

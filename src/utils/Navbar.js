@@ -56,13 +56,13 @@ function Navbar() {
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             style={
-              location.pathname === "/info"
+              location.pathname === "/about"
                 ? { pointerEvents: "none" }
                 : { pointerEvents: "auto" }
             }
           >
-            <Link to="/info">
-              {location.pathname === "/info" ? "●" : "Info"}
+            <Link to="/about">
+              {location.pathname === "/about" ? "●" : "About"}
             </Link>
           </motion.ul>
           <motion.ul

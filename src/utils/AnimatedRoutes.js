@@ -5,7 +5,7 @@ import "../css/index.css";
 import { motion } from "framer-motion";
 
 import Home from "../pages/Home";
-import Info from "../pages/Info";
+import About from "../pages/About";
 import Experience from "../pages/Experience";
 import Contact from "../pages/Contact";
 import DarkMode from "../components/DarkMode";
@@ -47,7 +47,7 @@ function AnimatedRoutes() {
           </div><Navbar /><DarkMode />
           <Routes location={location} key={location.pathname}>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/info" element={<Info />} />
+            <Route exact path="/about" element={<About />} />
             <Route exact path="/projects" element={<Experience />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes></motion.div>
