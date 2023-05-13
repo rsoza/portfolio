@@ -16,7 +16,7 @@ function About() {
 >
   <img src={pic} alt="profile" className="profile" style={{ position: "absolute", bottom: 0, right: 0 }} />
 </motion.div>
-  <div className="info">
+  <div className="home">
     <p>
       INFO WIP
       </p>
