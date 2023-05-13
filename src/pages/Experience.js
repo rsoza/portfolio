@@ -21,8 +21,7 @@ function Experience() {
   return (
     <motion.div
     initial={{ opacity: 0,}}
-    animate={{ opacity: 1, transition: {delay:0.5} }}
-    exit={{ opacity: 0 }}>
+    animate={{ opacity: 1, transition: {delay:0.5} }}>
         <div className="page_content project">
           <div className="project_section">
             <Text className="project_heading">■ Projects (Design & Develop)</Text>
