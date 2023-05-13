@@ -197,5 +197,6 @@ body .modal-dialog {
   bottom: 0;
   left: var(--pad);
   width: 60%;
+  max-width: fit-content;
   opacity: 0.9;
 }
