@@ -114,9 +114,9 @@ const PhotoCarousel = (props) => {
           whileTap={{ cursor: "grabbing" }}
           className="inner-carousel"
         >
-          {photoArray.map((photo) => {
+          {photoArray.map((photo, index) => {
             return (
-              <motion.div key={photo.id}>
+              <motion.div key={index}>
                 <img src={photo} className="item" alt="" />
               </motion.div>
             );

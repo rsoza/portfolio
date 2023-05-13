@@ -44,7 +44,8 @@ function AnimatedRoutes() {
             <div className="frame_border frame_right" />
             <div className="frame_border frame_top" />
             <div className="frame_border frame_bot" />
-          </div><Navbar /><DarkMode /><Routes location={location} key={location.pathname}>
+          </div><Navbar /><DarkMode />
+          <Routes location={location} key={location.pathname}>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/info" element={<Info />} />
             <Route exact path="/projects" element={<Experience />} />
