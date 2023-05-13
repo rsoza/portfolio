@@ -104,13 +104,13 @@ const AnimatedTextWord = ({ text }) => {
 };
 
 const AnimatedTextBlock = ({ text }) => {
-  const words = text.split(/\s+/);
+  const sentences = text.split(/[.!?]+/);
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.04, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.7, delayChildren: 0.7 * i },
     }),
   };
 
@@ -142,18 +142,19 @@ const AnimatedTextBlock = ({ text }) => {
       initial="hidden"
       animate="visible"
     >
-      {words.map((word, index) => (
+      {sentences.map((sentence, index) => (
         <motion.span
           variants={child}
           key={index}
           style={{ marginRight: "5px" }}
         >
-          {word}
+          {sentence.trim()}{index < sentences.length - 1 && '.'}
         </motion.span>
       ))}
     </motion.div>
   );
 };
+
 
 
 
