@@ -90,7 +90,7 @@ function ModalComponent(props) {
                     onHoverEnd={(e) => {}}
                   >
                     <ArrowBackIcon mr="20" />
-                    back to experience
+                    back to projects
                   </motion.div>
                 </ModalCloseButton>
                 <ModalBody overflowX="hidden">

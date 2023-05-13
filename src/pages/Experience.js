@@ -19,18 +19,20 @@ function Experience() {
   }, []);
 
   return (
+    <>
+    <h2 className="project_heading">■ Projects (Design & Develop)</h2>
     <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}>
         <div className="project">
           <div className="project_section">
-            <h2 className="project_heading">■ Projects (Design & Develop)</h2>
             <div className="project_list">
               <ModalComponent component={projects} type={"projects"} />
             </div>
           </div>
         </div>
     </motion.div>
+      </>
   );
 }
 
