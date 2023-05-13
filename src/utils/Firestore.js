@@ -1,8 +1,8 @@
-import { collection, getDocs, query } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firebaseConfig';
 
 export async function getGifs() {
-  const gifRef = query(collection(db, 'gifs'));
+  const gifRef = query(collection(db, 'gifs'), orderBy('projectYear', 'desc'));
   const gifs = [];
   
   const querySnapshot = await getDocs(gifRef);

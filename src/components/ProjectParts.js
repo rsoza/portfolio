@@ -51,6 +51,7 @@ const Description = (props) => {
               display="flex"
               fontWeight="300"
               lineHeight="1.7"
+              color="var(--body_color)"
             >
               {props.description}
             </Text>
@@ -130,6 +131,7 @@ const PhotoCarousel = (props) => {
             display="flex"
             lineHeight="1.7"
             className="quote"
+            color="var(--body_color)"
           >
             {props.description}
           </Text>
@@ -152,20 +154,21 @@ const Gif = (props) => {
             <img className="animated-gif" src={props.gif} alt="gif" />
           </Box>
         </Center>
-            </motion.div>
-        <Center>
-          <Box maxWidth="80%" display="flex">
-            <Text
-              fontFamily="Cormorant"
-              fontSize="2.6vh"
-              display="flex"
-              fontWeight="300"
-              lineHeight="1.7"
-            >
-              {props.description}
-            </Text>
-          </Box>
-        </Center>
+      </motion.div>
+      <Center>
+        <Box maxWidth="80%" display="flex">
+          <Text
+            fontFamily="Cormorant"
+            fontSize="2.6vh"
+            display="flex"
+            fontWeight="300"
+            lineHeight="1.7"
+            color="var(--body_color)"
+          >
+            {props.description}
+          </Text>
+        </Box>
+      </Center>
     </>
   );
 };
@@ -174,24 +177,25 @@ const SkillsDev = (props) => {
   const skills = props.skills;
   const skillsArray = skills.split(".");
 
-
   return (
     <Flex mr="10%" ml="10%" display="block">
       <Box pt="20">
-      <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "keyframe" } }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-          >
-        <Heading className="smallHeading">Skills Developed</Heading>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0, transition: { type: "keyframe" } }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Heading className="smallHeading">Skills Developed</Heading>
         </motion.div>
       </Box>
       <Box pb="40">
         <ul className="text">
-          {skillsArray.map((skill,index)=> {
-            return(
-              <li className="skill" key={index}>{skill}.</li>
+          {skillsArray.map((skill, index) => {
+            return (
+              <li className="skill" key={index}>
+                {skill}.
+              </li>
             );
           })}
         </ul>
@@ -215,7 +219,7 @@ const Footer = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        mt='100'
+        mt="100"
       >
         <Center>
           <motion.div

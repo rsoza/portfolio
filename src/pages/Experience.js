@@ -3,7 +3,7 @@ import "../css/pages.css";
 import React, { useEffect, useState } from "react";
 import { getGifs} from "../utils/Firestore";
 import { motion } from "framer-motion";
-import { Text } from "@chakra-ui/react";
+
 function Experience() {
   const [projects, setProjects] = useState([]);
 
@@ -20,11 +20,11 @@ function Experience() {
 
   return (
     <motion.div
-    initial={{ opacity: 0,}}
-    animate={{ opacity: 1}}>
-        <div className="page_content project">
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}>
+        <div className="project">
           <div className="project_section">
-            <Text className="project_heading">■ Projects (Design & Develop)</Text>
+            <h2 className="project_heading">■ Projects (Design & Develop)</h2>
             <div className="project_list">
               <ModalComponent component={projects} type={"projects"} />
             </div>

@@ -137,7 +137,7 @@ body .modal-dialog {
 .smallHeading {
     letter-spacing: 2px;
     text-transform: uppercase;
-    border: 1px #000;
+    border: 1px var(--body_color);
     border-bottom-style: solid;
     margin-bottom: 16px;
     padding-top: 24px;
@@ -146,6 +146,7 @@ body .modal-dialog {
     font-size: 14px;
     font-weight: 600;
     display: inline-block;
+    color: var(--body_color);
 }
 
 .item {
