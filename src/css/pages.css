@@ -38,9 +38,6 @@
     }
 }
 
-.project_section+.project_section {
-    margin-top: 100px
-}
 
 .project_heading {
     font-weight: 400;
@@ -209,9 +206,10 @@ body .modal-dialog {
 }
 
 .profile {
-  bottom: 22px;
-  left: var(--pad);
-  width: 50%;
-  max-width: fit-content;
-  opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    left: var(--pad);
+    width: 50%;
+    max-width: fit-content;
+    opacity: 0.9;
 }
