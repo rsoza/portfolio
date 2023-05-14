@@ -20,11 +20,11 @@ function Home() {
           <span>a student, problem </span>
           <span>solver, and self-taught </span>
           <span>developer. Currently,</span>
-          <span>pursuing a position</span>
-          <span>in Software Development</span>
-          <span>or Cloud Engineering </span>
-          <span>as soon as I graduate</span>
-          <span>in December 2023.</span>
+          <span>pursuing a position in</span>
+          <span>Software Development</span>
+          <span>or Cloud Engineering as </span>
+          <span>soon as I graduate in</span>
+          <span>December 2023.</span>
         </p>
       </div>
     </motion.div>

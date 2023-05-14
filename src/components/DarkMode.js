@@ -3,6 +3,7 @@ import "../css/darkmode.css";
 import { motion } from "framer-motion";
 
 const DarkMode = () => {
+
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
@@ -16,6 +17,10 @@ const DarkMode = () => {
 
   if (selectedTheme === "dark") {
     setDarkMode();
+  } else if (selectedTheme === "light") {
+    setLightMode();
+  } else {
+    setLightMode();
   }
 
   const toggleThemeDark = (e) => {

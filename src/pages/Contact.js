@@ -27,14 +27,14 @@ function Contact() {
         exit={{ opacity: 0, y: 100 }}
         style={{
           position: "relative",
-          height: "100vh",
+          height: "60vh",
         }}
       >
         <img
           src={pic}
           alt="profile"
           className="profile"
-          style={{ position: "absolute", bottom: 0, right: 0 }}
+          style={{ position: "absolute"}}
         />
       </motion.div>
       <div className="info">
