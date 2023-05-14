@@ -38,7 +38,6 @@ function AnimatedRoutes() {
             <div className="air air2"></div>
             <div className="air air3"></div>
             <div className="air air4"></div>
-          </div>
           <div className="borders" id="Borders">
             <div className="border_top" />
             <div className="border_bot" />
@@ -56,6 +55,8 @@ function AnimatedRoutes() {
             <Route exact path="/projects" element={<Experience />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
+          </div>
+
         </motion.div>
       )}
     </AnimatePresence>
