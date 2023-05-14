@@ -17,6 +17,26 @@ function Contact() {
       animate={{ opacity: 1}}
       exit={{ opacity: 0 }}
     >
+        <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { type: "spring", delay: 0.5, duration: 1 },
+        }}
+        exit={{ opacity: 0, y: 100 }}
+        style={{
+          position: "relative",
+          height: "100vh",
+        }}
+      >
+        <img
+          src={pic}
+          alt="profile"
+          className="profile"
+          style={{ position: "absolute", bottom: 0, right: 0 }}
+        />
+      </motion.div>
       <div className="info">
           <AnimatedTextWord text={"Hello,"} />
         <p>lets get to know each other!</p>
@@ -45,12 +65,10 @@ function Contact() {
           </a>
         </p>
         <motion.div
-        whileHover={{ scale: 1.5, x:0 }}
-        onHoverStart={(e) => {}}
-        onHoverEnd={(e) => {}}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        whileHover={{ scale: 0.95 }}
+        whileTap={{ scale: 1.02 }}
+        onHoverStart={e => {}}
+        onHoverEnd={e => {}}
       >
          <a
               href="files/resume.pdf"
@@ -60,26 +78,7 @@ function Contact() {
         </a>
       </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { type: "spring", delay: 0.5, duration: 1 },
-        }}
-        exit={{ opacity: 0, y: 100 }}
-        style={{
-          position: "relative",
-          height: "100vh",
-        }}
-      >
-        <img
-          src={pic}
-          alt="profile"
-          className="profile"
-          style={{ position: "absolute", bottom: 0, right: 0 }}
-        />
-      </motion.div>
+    
     </motion.div>
   );
 }

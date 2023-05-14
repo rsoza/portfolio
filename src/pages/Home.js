@@ -7,27 +7,25 @@ function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.5 } }}
     >
-
       <div className="home">
         <p className="home_aboutme">
-          <span>I'm Rebecca. Originally</span>
-          <span>from Miami, Florida,</span>
-          <span>moved to Kansas</span>
-          <span>in early 2021 to</span>
-          <span>complete my CS </span>
-          <span>degree at Wichita </span>
-          <span>State University. </span>
-          <span> Knownfor being a</span>
-          <span>student, problem solver,</span>
-          <span>and self-taught </span>
+          <span>Originally from Miami,</span>
+          <span>Florida, moved to Kansas</span>
+          <span>in early 2021 after</span>
+          <span>completing four years</span>
+          <span>of the Coast Guard to</span>
+          <span>complete a CS degree at</span>
+          <span>Wichita State University. </span>
+          <span>I am known for being</span>
+          <span>a student, problem </span>
+          <span>solver, and self-taught </span>
           <span>developer. Currently,</span>
-          <span>I am pursuing a</span>
-          <span>position in Software </span>
-          <span>Development or Cloud </span>
-          <span>Engineering as soon </span>
-          <span>as I graduate DEC-2023.</span>
+          <span>pursuing a position</span>
+          <span>in Software Development</span>
+          <span>or Cloud Engineering </span>
+          <span>as soon as I graduate</span>
+          <span>in December 2023.</span>
         </p>
-
       </div>
     </motion.div>
   );
