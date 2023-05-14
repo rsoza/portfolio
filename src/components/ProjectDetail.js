@@ -18,13 +18,21 @@ function ProjectDetailsPage({ project }) {
             tech={project.techStack}
             role={project.role}
           />
-          <PhotoCarousel
+          { !!project.pictures &&
+            <PhotoCarousel
             pictures={project.pictures}
             description={project.pictureDescription}
-          />
-          <Gif gif={project.gif1} description={project.gif1Description} />
+            />
+          }
+          { !!project.gif1 &&
+
+            <Gif gif={project.gif1} description={project.gif1Description} />
+          }
           <SkillsDev skills={project.skills} />
-          <Gif gif={project.gif2} description={project.gif2Description} />
+          { !!project.gif2 &&
+
+            <Gif gif={project.gif2} description={project.gif2Description} />
+          }
       <Footer />
     </Container>
   );
