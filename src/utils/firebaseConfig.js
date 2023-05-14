@@ -14,7 +14,14 @@ const firebaseConfig = {
 
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig, {
+  auth: {
+    cookie: {
+      sameSite: 'lax',
+      secure: true,
+    },
+  },
+});
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);
 // Initialize Firebase Authorization

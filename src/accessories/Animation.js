@@ -45,7 +45,6 @@ const AnimatedTextWord = ({ text }) => {
         <motion.span
           variants={child}
           key={index}
-          style={{ marginRight: "5px" }}
         >
           {word}
         </motion.span>
@@ -97,7 +96,6 @@ const AnimatedTextBlock = ({ text }) => {
         <motion.span
           variants={child}
           key={index}
-          style={{ marginRight: "5px" }}
         >
           {sentence.trim()}{index < sentences.length - 1 && '.'}
         </motion.span>

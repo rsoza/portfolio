@@ -19,7 +19,7 @@
 .info {
     position: absolute;
     right: calc(var(--pad)*2);
-    bottom: calc(var(--pad)*8);
+    bottom: calc(var(--pad)*10);
     line-height: 1.5;
     text-align: right;
     max-width: 300px;
@@ -98,7 +98,6 @@ img.animated-gif{
     color: var(--body_color);
 }
 
-
 body .modal-dialog { 
     max-width: 100%;
     width: auto !important;
@@ -140,11 +139,34 @@ body .modal-dialog {
     border: 1px var(--body_color);
     border-bottom-style: solid;
     margin-bottom: 16px;
-    padding-top: 24px;
+    padding-top: 15px;
     padding-bottom: 0;
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    display: inline-block;
+    color: var(--body_color);
+}
+
+.smallHeading-thin {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px var(--body_color);
+    border-bottom-style: solid;
+    padding-top: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    color: var(--body_color);
+}
+
+.smallHeading-sub {
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     display: inline-block;
     color: var(--body_color);
 }
@@ -183,10 +205,10 @@ body .modal-dialog {
 }
 
 .info_section {
+    display: block;
     font-family: Montserrat, sans-serif;
     font-size: 13px;
     font-weight: 400;
-    padding-top: 10px;
 }
 
 .email:hover {
@@ -196,7 +218,7 @@ body .modal-dialog {
 .profile {
   bottom: 0;
   left: var(--pad);
-  width: 60%;
+  width: 50%;
   max-width: fit-content;
   opacity: 0.9;
 }

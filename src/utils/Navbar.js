@@ -49,22 +49,7 @@ function Navbar() {
               {location.pathname === "/projects" ? "●" : "Projects"}
             </Link>
           </motion.ul>
-          <motion.ul
-            animate="visible"
-            exit="hidden"
-            whileHover={{ x: 5 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
-            style={
-              location.pathname === "/about"
-                ? { pointerEvents: "none" }
-                : { pointerEvents: "auto" }
-            }
-          >
-            <Link to="/about">
-              {location.pathname === "/about" ? "●" : "About"}
-            </Link>
-          </motion.ul>
+
           <motion.ul
             animate="visible"
             exit="hidden"
