@@ -7,7 +7,7 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="mainHeader" id="MainHeader">
+    <header className="mainHeader">
       <motion.div
         whileHover={{ scale: 1.03 }}
         onHoverStart={(e) => {}}
@@ -20,8 +20,6 @@ function Navbar() {
       <nav className="mainHeader_nav">
         <ol>
           <motion.ul
-            animate="visible"
-            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
@@ -31,11 +29,9 @@ function Navbar() {
                 : { pointerEvents: "auto" }
             }
           >
-            <Link to="/">{location.pathname === "/" ? "●" : "Home"}</Link>
+            <Link to="/">{location.pathname === "/" ? "●" : "About"}</Link>
           </motion.ul>
           <motion.ul
-            animate="visible"
-            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
@@ -51,8 +47,6 @@ function Navbar() {
           </motion.ul>
 
           <motion.ul
-            animate="visible"
-            exit="hidden"
             whileHover={{ x: 5 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}

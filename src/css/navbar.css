@@ -34,7 +34,7 @@
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--body_color);
     background-color: transparent;
 } 
 

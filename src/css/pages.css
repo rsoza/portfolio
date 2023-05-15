@@ -7,7 +7,7 @@
 
 .home {
     position: absolute;
-    right: calc(var(--pad)*2);
+    right: calc(var(--pad)*1);
     bottom: calc(var(--pad)*6);
     white-space: nowrap;
     line-height: 1.5;
@@ -20,7 +20,7 @@
 .info {
     position: absolute;
     right: calc(var(--pad)*1);
-    bottom: calc(var(--pad)*13);
+    bottom: calc(var(--pad)*14);
     white-space: nowrap;
     line-height: 1.5;
     text-align: right;
@@ -34,9 +34,17 @@
     white-space: nowrap;
 }
 
-@media(min-width: 1280px) {
+@media(min-width: 600px) {
     .project {
         padding:calc(var(--pad)) calc(var(--pad));
+    }
+    .info {
+        right: calc(var(--pad)*2);
+        bottom: calc(var(--pad)*2);
+    }
+    .home {
+        right: calc(var(--pad)*2);
+        bottom: calc(var(--pad)*2);
     }
 }
 
