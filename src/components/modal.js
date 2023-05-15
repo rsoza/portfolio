@@ -78,7 +78,7 @@ function ModalComponent(props) {
       <div className="modal">
         <div className="modal-dialog">
           <Modal onClose={onCloseTimeout} isOpen={isOpen}>
-            <ModalOverlay backdropFilter="blur(10px) hue-rotate(90deg)" />
+            <ModalOverlay backdropFilter="blur(20px) hue-rotate(90deg)" />
             {timeoutSet && (
               <ModalContent maxH="99vh">
                 <ModalCloseButton

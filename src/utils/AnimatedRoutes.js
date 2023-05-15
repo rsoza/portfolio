@@ -15,6 +15,8 @@ import LoadingScreen from "../pages/LoadingScreen";
 function AnimatedRoutes() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const selectedTheme = localStorage.getItem("selectedTheme");
+  console.log(selectedTheme)
 
   useEffect(() => {
     setTimeout(() => {

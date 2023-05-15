@@ -25,7 +25,7 @@ function Contact() {
         transition: { type: "spring", delay: 0.5, duration: 1 },
       }}
       exit={{ opacity: 0, y:100}}
-      style={{position: "relative", height: '100vh', zIndex: 4}}
+      style={{position: "relative", height:"95.5vh", zIndex: 4}}
     >
       <img
         src={pic}
