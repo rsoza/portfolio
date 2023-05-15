@@ -22,7 +22,6 @@ const Header = (props) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            // exit={{ opacity: 0 }}
             transition={{ delay: 0.2 }}
           >
             <Text className="h1" color="var(--body_background)">
@@ -58,7 +57,6 @@ const Description = (props) => {
           </motion.div>
         </Box>
       </Center>
-      {/* <Center> */}
       <Flex
         maxWidth="50%"
         display="flex"
@@ -90,7 +88,6 @@ const Description = (props) => {
           <Text className="text">{props.tech}</Text>
         </Box>
       </Flex>
-      {/* </Center> */}
     </>
   );
 };
@@ -225,7 +222,6 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            // exit={{ opacity: 0 }}
             transition={{ delay: 0.2 }}
           >
             <Text className="h1" color="var(--body_background)">
