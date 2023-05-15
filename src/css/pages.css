@@ -29,14 +29,15 @@
 }
 
 .project {
-    padding: calc(var(--pad)*2 + 180px) calc(var(--pad)*1);
+    padding: calc(var(--pad)*2 + 140px) calc(var(--pad)*1);
     text-align: right;
     white-space: nowrap;
 }
 
 @media(min-width: 600px) {
     .project {
-        padding:calc(var(--pad)) calc(var(--pad));
+        max-height: fit-content;
+        padding: calc(var(--pad)*2 + 96px) calc(var(--pad)*1);
     }
     .info {
         right: calc(var(--pad)*2);
@@ -44,7 +45,12 @@
     }
     .home {
         right: calc(var(--pad)*2);
-        bottom: calc(var(--pad)*2);
+        bottom: calc(var(--pad));
+        z-index: 9999;
+    }
+    .home_aboutme {
+        max-height: 80vh;
+        overflow: scroll;
     }
 }
 
