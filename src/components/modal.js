@@ -65,6 +65,7 @@ function ModalComponent(props) {
               setSelectElement(element);
               onOpen();
             }}
+            style={{cursor:"pointer"}}
           >
             <Text className="h1">
               <AnimatedTextWord text={element.projectName} />
@@ -96,6 +97,7 @@ function ModalComponent(props) {
                     whileHover={{ x: -5 }}
                     onHoverStart={(e) => {}}
                     onHoverEnd={(e) => {}}
+                    style={{cursor:"pointer"}}
                   >
                     <ArrowBackIcon mr="20" />
                     back to projects
