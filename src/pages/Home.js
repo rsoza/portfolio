@@ -21,8 +21,7 @@ function Home() {
           <span>Firebase and React JS</span>
           <span>by me. Currently,</span>
           <span>pursuing a position in</span>
-          <span>Software Development</span>
-          <span>or AI Engineering as </span>
+          <span>Software Development as</span>
           <span>soon as I graduate in</span>
           <span>December 2023.</span>
         </p>
