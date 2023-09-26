@@ -13,8 +13,8 @@ function Home() {
           <span>Florida, moved to Kansas</span>
           <span>in early 2021 after</span>
           <span>completing four years</span>
-          <span>of the Coast Guard to</span>
-          <span>complete a CS degree at</span>
+          <span>in the Coast Guard to</span>
+          <span>completing a CS degree at</span>
           <span>Wichita State University. </span>
           <span>I am known for being</span>
           <span>a student, problem </span>
@@ -22,7 +22,7 @@ function Home() {
           <span>developer. Currently,</span>
           <span>pursuing a position in</span>
           <span>Software Development</span>
-          <span>or Cloud Engineering as </span>
+          <span>or AI Engineer as </span>
           <span>soon as I graduate in</span>
           <span>December 2023.</span>
         </p>
