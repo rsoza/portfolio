@@ -22,7 +22,7 @@ function Home() {
           <span>by me. Currently,</span>
           <span>pursuing a position in</span>
           <span>Software Development</span>
-          <span>or AI Engineer as </span>
+          <span>or AI Engineering as </span>
           <span>soon as I graduate in</span>
           <span>December 2023.</span>
         </p>
