@@ -16,10 +16,10 @@ function Home() {
           <span>in the Coast Guard to</span>
           <span>completing a CS degree at</span>
           <span>Wichita State University. </span>
-          <span>I am known for being</span>
-          <span>a student, problem </span>
-          <span>solver, and self-taught </span>
-          <span>developer. Currently,</span>
+          <span>this virtual business</span>
+          <span>card was made using </span>
+          <span>Firebase and React JS</span>
+          <span>by me. Currently,</span>
           <span>pursuing a position in</span>
           <span>Software Development</span>
           <span>or AI Engineer as </span>
