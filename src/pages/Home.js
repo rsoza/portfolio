@@ -16,7 +16,7 @@ function Home() {
           <span>in the Coast Guard to</span>
           <span>completing a CS degree at</span>
           <span>Wichita State University. </span>
-          <span>this virtual business</span>
+          <span>This virtual business</span>
           <span>card was made using </span>
           <span>Firebase and React JS</span>
           <span>by me. Currently,</span>
