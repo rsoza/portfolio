@@ -1,4 +1,4 @@
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, addDoc } from 'firebase/firestore';
 import { db } from './firebaseConfig';
 
 export async function getGifs() {
@@ -27,6 +27,20 @@ export async function getWork() {
 
   return work;
 };
+
+export async function storeVisitor(name) {
+  try {
+    const visitorsRef = collection(db, 'visitors');
+    
+    await addDoc(visitorsRef, {
+      name: name
+    });
+
+    console.log('Visitor added successfully!');
+  } catch (error) {
+    console.error('Error adding visitor: ', error);
+  }
+}
 
 export async function getSchool() {
   const schoolRef = query(collection(db, 'school'));

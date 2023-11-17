@@ -12,11 +12,9 @@ import Navbar from "./Navbar";
 import LoadingScreen from "../pages/LoadingScreen";
 
 
-function AnimatedRoutes() {
+function AnimatedRoutes({username}) {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const selectedTheme = localStorage.getItem("selectedTheme");
-  console.log(selectedTheme)
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +25,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence>
       {isLoading ? (
-        <LoadingScreen />
+        <LoadingScreen username={username}/>
       ) : (
         <motion.div
           initial={{ opacity: 0 }}
