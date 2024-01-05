@@ -17,10 +17,10 @@ function Home() {
           <span>Wichita State University. </span>
           <span>This portfolio was insprired</span>
           <span>with the idea of having a </span>
-          <span>virtual business card which</span>
-          <span>was made by me using </span>
-          <span>Firebase and React JS.</span>
-          <span>Currently, pursuing a position</span>
+          <span>virtual business card made</span>
+          <span>by me using Firebase and </span>
+          <span>React JS. Currently,</span>
+          <span>pursuing a position</span>
           <span>in Software Development.</span>
         </p>
       </div>
