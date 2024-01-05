@@ -68,7 +68,7 @@ function Contact() {
         onHoverEnd={e => {}}
       >
          <a
-              href="files/resume.pdf"
+              href="files/Resume.pdf"
               title="Download CV"
             >
           <Text className="smallHeading-thin">cv</Text>
