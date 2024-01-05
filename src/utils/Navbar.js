@@ -15,7 +15,7 @@ function Navbar() {
       >
         <h1 className="mainHeader_title">
           <AnimatedTextBlock text={"Rebecca Soza"} /></h1>
-        <p className="mainHeader_label">Computer Science Student</p>
+        <p className="mainHeader_label">Computer Scientist</p>
       </motion.div>
       <nav className="mainHeader_nav">
         <ol>
