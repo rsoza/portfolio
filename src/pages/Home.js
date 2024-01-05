@@ -21,9 +21,7 @@ function Home() {
           <span>was made by me using </span>
           <span>Firebase and React JS.</span>
           <span>Currently, pursuing a position</span>
-          <span>in Software Development as</span>
-          <span>soon as I graduate in</span>
-          <span>December 2023.</span>
+          <span>in Software Development.</span>
         </p>
       </div>
     </motion.div>
