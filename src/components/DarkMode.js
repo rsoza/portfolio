@@ -44,7 +44,7 @@ const DarkMode = () => {
           type="radio"
           id="darkmode-toggle"
           onChange={toggleThemeLight}
-          defaultChecked={selectedTheme === "light"}
+          defaultChecked={selectedTheme === "light" || selectedTheme === null}
         />
         <motion.div whileHover={{ scale: 0.9 }}>LIGHT</motion.div>
       </motion.label>

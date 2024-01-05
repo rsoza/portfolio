@@ -34,7 +34,7 @@ function NameForm({ onNameSubmit }) {
     transition={overlayTransition}
   >
     <Center h="100vh" 
-    bg={selectedTheme === 'light' ? 'hsl(0, 0%, 88%)' : "hsl(0, 0%, 0%)"}
+    bg={selectedTheme === 'light' || selectedTheme === null ? 'hsl(0, 0%, 88%)' : "hsl(0, 0%, 0%)"}
     color={selectedTheme === 'dark' ? 'hsl(0, 0%, 90%)' : "hsl(0, 0%, 8%)"}
     >
     <form onSubmit={handleSubmit}>

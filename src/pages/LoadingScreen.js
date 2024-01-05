@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const LoadingScreen = ({username}) => {
   const selectedTheme = localStorage.getItem("selectedTheme");
-
+  
 
   const overlayVariants = {
     hidden: { opacity: 0 },
@@ -25,7 +25,7 @@ const LoadingScreen = ({username}) => {
       transition={overlayTransition}
     >
       <Center h="100vh" 
-      bg={selectedTheme === 'light' ? 'hsl(0, 0%, 88%)' : "hsl(0, 0%, 0%)"}
+      bg={selectedTheme === 'light' || selectedTheme === null ? 'hsl(0, 0%, 88%)' : "hsl(0, 0%, 0%)"}
       color={selectedTheme === 'dark' ? 'hsl(0, 0%, 90%)' : "hsl(0, 0%, 8%)"}
       >
         <Stack spacing={3}>
