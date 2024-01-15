@@ -15,7 +15,7 @@ function Navbar() {
       >
         <h1 className="mainHeader_title">
           <AnimatedTextBlock text={"Rebecca Soza"} /></h1>
-        <p className="mainHeader_label">Computer Scientist</p>
+        <span className="mainHeader_label">Computer Scientist</span>
       </motion.div>
       <nav className="mainHeader_nav">
         <ol>
@@ -29,7 +29,7 @@ function Navbar() {
                 : { pointerEvents: "auto" }
             }
           >
-            <Link to="/">{location.pathname === "/" ? "●" : "About"}</Link>
+            <Link to="/">{location.pathname === "/" ? "⚓︎" : "About"}</Link>
           </motion.ul>
           <motion.ul
             whileHover={{ x: 5 }}
@@ -42,7 +42,7 @@ function Navbar() {
             }
           >
             <Link to="/projects">
-              {location.pathname === "/projects" ? "●" : "Projects"}
+              {location.pathname === "/projects" ? "⚓︎" : "Projects"}
             </Link>
           </motion.ul>
 
@@ -57,7 +57,7 @@ function Navbar() {
             }
           >
             <Link to="/contact">
-              {location.pathname === "/contact" ? "●" : "Contact"}
+              {location.pathname === "/contact" ? "⚓︎" : "Contact"}
             </Link>
           </motion.ul>
         </ol>

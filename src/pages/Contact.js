@@ -41,15 +41,14 @@ function Contact() {
           <Center>
             Connect:
             <a
-              href="https://www.linkedin.com/in/rebecca-soza-94491325a/"
+              href="https://wichitastate.joinhandshake.com/stu/users/29373737"
               className="email _space"
             >
-              LinkedIn
+              Handshake
             </a> /
             <a href="https://github.com/rsoza" className="email _space">
               GitHub
-            </a>
-           <span> / </span> 
+            </a> /
             <a href="https://discord.com/users/rebecca#4142" className="email">
               Discord
             </a>

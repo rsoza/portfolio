@@ -55,8 +55,13 @@
 }
 
 .project_heading {
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.project_subheading {
     font-weight: 400;
     padding-bottom: 40px;
+    font-style: italic;
 }
 
 .project_list {

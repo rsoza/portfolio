@@ -11,6 +11,7 @@ function Experience() {
         <div className="project">
           <div className="project_section">
           <h2 className="project_heading">■ Projects (Design & Develop)</h2>
+          <h2 className="project_subheading">click title for more info</h2>
             <div className="project_list">
               <ModalComponent/>
             </div>

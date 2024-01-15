@@ -9,19 +9,22 @@ function Home() {
     >
       <div className="home">
         <p className="home_aboutme">
-          <span>Originally from Miami,</span>
-          <span>Florida, moved to Kansas</span>
-          <span>in early 2021 after completing</span>
-          <span>four years in the Coast Guard</span>
-          <span>to completing a CS degree at</span>
-          <span>Wichita State University. </span>
-          <span>This portfolio was insprired</span>
-          <span>with the idea of having a </span>
-          <span>virtual business card made</span>
-          <span>by me using Firebase and </span>
-          <span>React JS. Currently,</span>
-          <span>pursuing a position</span>
-          <span>in Software Development.</span>
+          <span>Thank you for taking the time</span>
+          <span>to get to know me. I am a self </span>
+          <span>driven motivated individual who</span>
+          <span>looking for a job in a Defense </span>
+          <span>Company. My career intrests are </span> 
+          <span>software dev, machine learning,</span>
+          <span>problem solving, algorithm design,</span>
+          <span>and a bit of frontend dev. Feel </span>
+          <span>free to check out my projects</span>
+          <span>as they explain my passion. This</span>
+          <span>portfolio was insprired with the </span>
+          <span>idea of having a virtual business </span>
+          <span>card made by me using Firebase </span>
+          <span>and React JS. For a better user</span>
+          <span>experience, please use a mobile</span>
+          <span>device.</span>
         </p>
       </div>
     </motion.div>

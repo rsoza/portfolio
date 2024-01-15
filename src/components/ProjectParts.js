@@ -98,9 +98,12 @@ const PhotoCarousel = (props) => {
 
   var photos = props.pictures;
   var photoArray = photos.split(", ");
-
+  
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    setTimeout(()=> {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    },2000)
+ 
   }, []);
 
   return (
