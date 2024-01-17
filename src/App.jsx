@@ -11,8 +11,17 @@ function App() {
 
   const handleNameSubmit = (name) => {
     storeVisitor(name);
-    setIsNameEntered(true);
-    setUsername(name);
+    if (name.toLowerCase().includes("meow") || name.toLowerCase() === "no"){
+      if (name.toLowerCase().includes("meow")) {
+        window.alert("meow meow meow meow 🐈");
+        window.alert("Long time no talk");
+        window.alert("How's it going?");
+      }
+      setIsNameEntered(false);
+    } else{
+      setIsNameEntered(true);
+      setUsername(name);
+    }
   };
 
   return (
