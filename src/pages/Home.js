@@ -11,8 +11,8 @@ function Home() {
         <p className="home_aboutme">
           <span>Thank you for taking the time</span>
           <span>to get to know me. I am a self </span>
-          <span>driven motivated individual who</span>
-          <span>looking for a job in a Defense </span>
+          <span>driven proactive individual who</span>
+          <span>is looking for a job in a Defense </span>
           <span>Company. My career intrests are </span> 
           <span>software dev, machine learning,</span>
           <span>problem solving, algorithm design,</span>
