@@ -12,7 +12,7 @@ import Navbar from "./Navbar";
 import LoadingScreen from "../pages/LoadingScreen";
 
 
-function AnimatedRoutes({username}) {
+function AnimatedRoutes() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +25,7 @@ function AnimatedRoutes({username}) {
   return (
     <AnimatePresence>
       {isLoading ? (
-        <LoadingScreen username={username}/>
+        <LoadingScreen />
       ) : (
         <motion.div
           initial={{ opacity: 0 }}

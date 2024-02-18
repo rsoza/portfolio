@@ -14,7 +14,8 @@ function Navbar() {
         onHoverEnd={(e) => {}}
       >
         <h1 className="mainHeader_title">
-          <AnimatedTextBlock text={"Rebecca Soza"} /></h1>
+          <AnimatedTextBlock text={"Rebecca Soza"} />
+        </h1>
         <span className="mainHeader_label">Computer Scientist</span>
       </motion.div>
       <nav className="mainHeader_nav">
@@ -30,6 +31,16 @@ function Navbar() {
             }
           >
             <Link to="/">{location.pathname === "/" ? "⚓︎" : "About"}</Link>
+          </motion.ul>
+          <motion.ul
+            whileHover={{ x: 5 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            style={{ pointerEvents: "auto" }}
+          >
+            <Link to="https://github.com/rsoza">
+              Current Activity
+            </Link>
           </motion.ul>
           <motion.ul
             whileHover={{ x: 5 }}

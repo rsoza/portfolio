@@ -14,8 +14,8 @@ function Home() {
           <span>driven proactive individual who</span>
           <span>is looking for a job in a Defense </span>
           <span>Company. My career intrests are </span> 
-          <span>software dev, machine learning,</span>
-          <span>problem solving, algorithm design,</span>
+          <span>software dev in embedded systems,</span>
+          <span>machine learning, algorithm design,</span>
           <span>and a bit of frontend dev. Feel </span>
           <span>free to check out my projects</span>
           <span>as they explain my passion. This</span>
