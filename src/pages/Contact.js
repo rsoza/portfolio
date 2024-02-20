@@ -51,7 +51,7 @@ function Contact() {
             </a> /
             <a href="https://discord.com/users/rebecca#4142" className="email">
               Discord
-            </a>
+            </a> /
             <a href="https://medium.com/@bsoza93" className="email">
               Medium
             </a>
