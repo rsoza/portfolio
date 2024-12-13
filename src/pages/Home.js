@@ -9,20 +9,20 @@ function Home() {
     >
       <div className="home">
         <p className="home_aboutme">
-          <span>Hello! My name is Rebecca, and I</span>
-          <span>am a Software Engineer, originally</span>
+          <span>My name is Rebecca and I am a</span>
+          <span>Software Engineer! Originally</span>
           <span>started as a Computer Scientist in</span>
           <span>backend/frontend development in IT</span>
-          <span> services. Currently, I am searching</span> 
+          <span>services. Currently, I am searching</span> 
           <span>for a job that fits my skill set. </span>
           <span>If you are looking for a developer with</span>
           <span>interests in exploring mathematical and </span>
-          <span>networking problems, feel free to reach out!</span>
-          <span>My latest project is exploring Kepler's Laws</span>
-          <span>which uses geometry and physics in C++.</span>
-          <span>Please check out my projects for the explanation</span>
-          <span>of these software side projects or current</span>
-          <span>activity for my github!</span>
+          <span>networking problems, feel free to reach</span>
+          <span>out! My latest project is exploring </span>
+          <span>Kepler's Laws which uses geometry</span>
+          <span>and physics in C++.</span>
+          <span>Please check out my projects or</span>
+          <span>current activity for my github!</span>
         </p>
       </div>
     </motion.div>
