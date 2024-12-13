@@ -28,8 +28,7 @@ I'm always eager to improve and grow as a developer. If you have any feedback, s
 
 ## Let's Connect
 
-- Check out my portfolio [here](https://rsoza.info).
-- Connect with me on [LinkedIn](https://www.linkedin.com/in/rebecca-soza-74531a2b4/).
+- Check out my portfolio [here](https://portfolio-c42a2.web.app).
 - Checkout my series explaining the concept behind this idea on [medium](https://medium.com/@bsoza93/portfolio-for-beginners-using-react-js-and-firebase-part-1-design-6f31007ff4b3).
 
 Thank you for visiting my portfolio!
