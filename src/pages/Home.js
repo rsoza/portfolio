@@ -9,22 +9,20 @@ function Home() {
     >
       <div className="home">
         <p className="home_aboutme">
-          <span>Thank you for taking the time</span>
-          <span>to get to know me. I am a self </span>
-          <span>driven proactive individual who</span>
-          <span>is looking for a job in a Defense </span>
-          <span>Company. My career intrests are </span> 
-          <span>software dev in embedded systems,</span>
-          <span>machine learning, algorithm design,</span>
-          <span>and a bit of frontend dev. Feel </span>
-          <span>free to check out my projects</span>
-          <span>as they explain my passion. This</span>
-          <span>portfolio was insprired with the </span>
-          <span>idea of having a virtual business </span>
-          <span>card made by me using Firebase </span>
-          <span>and React JS. For a better user</span>
-          <span>experience, please use a mobile</span>
-          <span>device.</span>
+          <span>Hello! My name is Rebecca, and I</span>
+          <span>am a Software Engineer, originally</span>
+          <span>started as a Computer Scientist in</span>
+          <span>backend/frontend development in IT</span>
+          <span> services. Currently, I am searching</span> 
+          <span>for a job that fits my skill set. </span>
+          <span>If you are looking for a developer with</span>
+          <span>interests in exploring mathematical and </span>
+          <span>networking problems, feel free to reach out!</span>
+          <span>My latest project is exploring Kepler's Laws</span>
+          <span>which uses geometry and physics in C++.</span>
+          <span>Please check out my projects for the explanation</span>
+          <span>of these software side projects or current</span>
+          <span>activity for my github!</span>
         </p>
       </div>
     </motion.div>

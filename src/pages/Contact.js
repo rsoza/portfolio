@@ -49,7 +49,7 @@ function Contact() {
             <a href="https://github.com/rsoza" className="email _space">
               GitHub
             </a> /
-            <a href="https://discord.com/users/rebecca#4142" className="email">
+            <a href="https://discord.com/users/rebecca#4142" className="email _space">
               Discord
             </a> /
             <a href="https://medium.com/@bsoza93" className="email">
