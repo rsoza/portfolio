@@ -21,6 +21,7 @@ function Home() {
           <span>out! My latest project is exploring </span>
           <span>Kepler's Laws which uses geometry</span>
           <span>and physics in C++.</span>
+
           <span>Please check out my projects or</span>
           <span>current activity for my github!</span>
         </p>
