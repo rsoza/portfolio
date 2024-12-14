@@ -3,7 +3,6 @@ import "../css/darkmode.css";
 import { motion } from "framer-motion";
 
 const DarkMode = () => {
-
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
@@ -20,7 +19,7 @@ const DarkMode = () => {
   } else if (selectedTheme === "light") {
     setLightMode();
   } else {
-    setLightMode();
+    setDarkMode();
   }
 
   const toggleThemeDark = (e) => {
@@ -32,10 +31,10 @@ const DarkMode = () => {
 
   return (
     <div className="dark_mode">
-      <motion.label 
-      className="light_mode_label"
-      htmlFor="darkmode-toggle"
-      whileHover={{ scale: 0.9 }}
+      <motion.label
+        className="light_mode_label"
+        htmlFor="darkmode-toggle"
+        whileHover={{ scale: 0.9 }}
       >
         <motion.input
           className="dark_mode_input"
@@ -48,10 +47,10 @@ const DarkMode = () => {
         />
         <motion.div whileHover={{ scale: 0.9 }}>LIGHT</motion.div>
       </motion.label>
-      <motion.label 
-      className="dark_mode_label" 
-      htmlFor="darkmode-toggle"
-      whileHover={{ scale: 0.9 }}
+      <motion.label
+        className="dark_mode_label"
+        htmlFor="darkmode-toggle"
+        whileHover={{ scale: 0.9 }}
       >
         <motion.input
           className="dark_mode_input"
