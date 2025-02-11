@@ -2,7 +2,6 @@ import { Center, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { AnimatedTextWord } from "../accessories/Animation";
 import pic from "./pic.png";
-import cpe_entry from "./cpe-20-01-cpe-c-certified-entry-level-programmer.png";
 
 function Contact() {
   const emailAddress = "rsoza02@outlook.com";
@@ -30,7 +29,7 @@ function Contact() {
         <img src={pic} alt="profile" className="profile" />
       </motion.div>
       <div className="info">
-      <img src={cpe_entry} alt="cpe_entry" className="cpe_entry" />
+     
         <AnimatedTextWord text={"Hello,"} />
         <p>lets get to know each other!</p>
         <p className="info_section">
