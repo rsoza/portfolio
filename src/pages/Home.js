@@ -19,8 +19,6 @@ function Home() {
           <span>interests in exploring mathematical and </span>
           <span>networking problems, feel free to reach</span>
           <span>out!</span>
-          <span>Please check out Projects or</span>
-          <span>Current Activity tabs for my github!</span>
         </p>
       </div>
     </motion.div>

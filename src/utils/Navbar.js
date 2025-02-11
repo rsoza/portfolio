@@ -38,8 +38,8 @@ function Navbar() {
             onHoverEnd={(e) => {}}
             style={{ pointerEvents: "auto" }}
           >
-            <Link to="https://github.com/rsoza">
-              Current Activity
+            <Link to="https://leetcode.com/u/bsoza93/">
+              LeetCode
             </Link>
           </motion.ul>
           <motion.ul
